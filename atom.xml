@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mendale’s Blog</title>
+  
+  
+  <link href="https://goen-kkk.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://goen-kkk.github.io/"/>
+  <updated>2021-05-16T14:53:02.479Z</updated>
+  <id>https://goen-kkk.github.io/</id>
+  
+  <author>
+    <name>Mendale Wu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>企业环境渗透问题总结</title>
+    <link href="https://goen-kkk.github.io/2021/05/16/%E4%BC%81%E4%B8%9A%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+    <id>https://goen-kkk.github.io/2021/05/16/%E4%BC%81%E4%B8%9A%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/</id>
+    <published>2021-05-16T14:51:56.000Z</published>
+    <updated>2021-05-16T14:53:02.479Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;%E4%BC%81%E4%B8%9A%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F1%262%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93&quot; id=&quot;企业环境渗透1-2问题总结&quot;&gt;企业环境渗透1&amp;amp;2问题总结&lt;/h2&gt;
+&lt;p&gt;做实验时遇到的问题汇总，希望能帮助到大家👇&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="实验" scheme="https://goen-kkk.github.io/tags/%E5%AE%9E%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://goen-kkk.github.io/2021/05/16/hello-world/"/>
+    <id>https://goen-kkk.github.io/2021/05/16/hello-world/</id>
+    <published>2021-05-16T13:32:05.432Z</published>
+    <updated>2021-05-16T13:32:05.432Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
