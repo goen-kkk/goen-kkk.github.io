@@ -75,38 +75,38 @@
 <h4 id="%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98" id="联合查询失败问题">联合查询失败问题</h4>
 <p>可以大小写绕过</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=-1 UniOn SeleCt 1,2,3,4,5,6,7,8,9,0</span><br></pre></td></tr></table></figure>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511171234.png" alt="20210511171234" /></p>
+<p><img src="20210511171234.png" alt="20210511171234" /></p>
 <p>发现 1 和 3 为显示位 ，接下来就可以进行一系列操作啦</p>
 <ul>
 <li>
 <p>确定当前使用的数据库</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=-1 UniOn SeleCt 1,2,database(),4,5,6,7,8,9,0</span><br></pre></td></tr></table></figure>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511172123.png" alt="" /></p>
+<p><img src="20210511172123.png" alt="" /></p>
 </li>
 <li>
 <p>确定当前使用的用户</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=-1 UniOn SeleCt 1,2,user(),4,5,6,7,8,9,0</span><br></pre></td></tr></table></figure>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511172354.png" alt="20210511172354" /></p>
+<p><img src="20210511172354.png" alt="20210511172354" /></p>
 </li>
 <li>
 <p>读取 apache 的配置文件，得到网站根目录</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?id=-1 UniOn SeleCt 1,2,load_file(“/etc/httpd/conf/httpd.conf”),4,5,6,7,8,9,0</span><br></pre></td></tr></table></figure>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511172525.png" alt="20210511172525" /></p>
+<p><img src="20210511172525.png" alt="20210511172525" /></p>
 </li>
 </ul>
 <p>这里汇总了一下常见的 SQL 注入 pypass 方法，大家也可以试试其他方法</p>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511172751.png" alt="20210511172751" /></p>
+<p><img src="20210511172751.png" alt="20210511172751" /></p>
 <p><br/></br></p>
 <h3 id="%E4%BB%BB%E5%8A%A1%E4%B8%89" id="任务三">任务三</h3>
 <h4 id="%E6%89%93%E5%BC%80%E8%99%9A%E6%8B%9F%E7%BB%88%E7%AB%AF" id="打开虚拟终端">打开虚拟终端</h4>
 <p>我之前没明白教程上的终端图从哪来的</p>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511173242.png" alt="20210511173242" /></p>
+<p><img src="20210511173242.png" alt="20210511173242" /></p>
 <p>打开之后长这样</p>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511173420.png" alt="20210511173420" /></p>
+<p><img src="20210511173420.png" alt="20210511173420" /></p>
 <h3 id="%E4%BB%BB%E5%8A%A1%E5%9B%9B" id="任务四">任务四</h3>
 <h4 id="%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98" id="远程连接失败问题">远程连接失败问题</h4>
 <p>远程登录时，出现以下报错</p>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511173026.png" alt="20210511173026" /></p>
+<p><img src="20210511173026.png" alt="20210511173026" /></p>
 <p>更改了 <code>reGeorgSocksProxy.py</code> 代理设置的端口，从 <code>8080</code> 更改为 <code>8888</code>，解决了远</p>
 <p>程登录的问题。</p>
 <hr />
@@ -127,15 +127,15 @@
 <ol>
 <li>
 <p>访问http://192.168.2.11/wp-admin页面，可以看到左上角有 Length 字样，需要测试 length 是哪个字段的长度</p>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210513122554.png" alt="20210513122554" /></p>
+<p><img src="20210513122554.png" alt="20210513122554" /></p>
 </li>
 <li>
 <p>使用Burpsuite的repeater模块探测漏洞字段。</p>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C1.png" alt="1" /></p>
+<p><img src="1.png" alt="1" /></p>
 </li>
 <li>
 <p>修改host字段，发现Host字段的长度即是响应中length的值，即漏洞字段为Host</p>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C2.png" alt="2" /></p>
+<p><img src="2.png" alt="2" /></p>
 </li>
 </ol>
 <p><br/></br></p>
@@ -167,13 +167,13 @@
 <p>在监听5555端口的终端得到反弹的shell</p>
 </li>
 </ol>
-<p><img src="E:%5CmyBlog%5Csource_posts%5C20210511184334.png" alt="20210511184334" /></p>
+<p><img src="20210511184334.png" alt="20210511184334" /></p>
 <p>还有一个问题，shell维持的时间可能比较短，很拼手速，一个小tips：可以先打出命令，登弹出时，直接回车就行。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://goen-kkk.github.io/2021/05/16/%E4%BC%81%E4%B8%9A%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" data-id="ckorbedrp000410w8he8s02u7" class="article-share-link">
+      <a data-url="https://goen-kkk.github.io/2021/05/16/%E4%BC%81%E4%B8%9A%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" data-id="ckorbj6q30001xkw845462glv" class="article-share-link">
         Share
       </a>
       
