@@ -323,7 +323,7 @@ f = 700*(10^(m/2595)-1)</p>
       </categories>
       <tags>
         <tag>论文</tag>
-        <tag>语言生成</tag>
+        <tag>自然语言生成</tag>
       </tags>
   </entry>
   <entry>
@@ -348,8 +348,8 @@ f = 700*(10^(m/2595)-1)</p>
         <category>NLP</category>
       </categories>
       <tags>
-        <tag>语言生成</tag>
         <tag>实验</tag>
+        <tag>自然语言生成</tag>
       </tags>
   </entry>
   <entry>
