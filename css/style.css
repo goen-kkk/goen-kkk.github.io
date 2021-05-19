@@ -1133,6 +1133,9 @@ img {
     display: block;
   }
 }
+.mermaid {
+  background: transparent;
+}
 .list-unstyled,
 .list-inline {
   list-style: none;

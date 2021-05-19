@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://goen-kkk.github.io/2021/05/19/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/</loc>
+    
+    <lastmod>2021-05-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://goen-kkk.github.io/2021/05/18/Dear-Sir%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://goen-kkk.github.io/2021/05/18/Twitter-Style-Trans/</loc>
+    
+    <lastmod>2021-05-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://goen-kkk.github.io/about/index.html</loc>
     
     <lastmod>2021-05-16</lastmod>
@@ -60,19 +81,47 @@
 
   <url>
     <loc>https://goen-kkk.github.io/</loc>
-    <lastmod>2021-05-18</lastmod>
+    <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>https://goen-kkk.github.io/tags/%E8%AE%BA%E6%96%87/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goen-kkk.github.io/tags/%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://goen-kkk.github.io/tags/%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2021-05-18</lastmod>
+    <lastmod>2021-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://goen-kkk.github.io/categories/NLP/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://goen-kkk.github.io/categories/python/</loc>
+    <lastmod>2021-05-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
