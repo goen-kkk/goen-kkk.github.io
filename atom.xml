@@ -64,12 +64,14 @@
     <link href="https://goen-kkk.github.io/2021/05/18/Twitter-Style-Trans/"/>
     <id>https://goen-kkk.github.io/2021/05/18/Twitter-Style-Trans/</id>
     <published>2021-05-18T06:10:46.232Z</published>
-    <updated>2021-05-19T14:54:44.573Z</updated>
+    <updated>2021-05-19T15:54:13.082Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;twitter%E8%AF%AD%E8%A8%80%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB&quot; id=&quot;Twitter语言风格迁移&quot;&gt;Twitter语言风格迁移&lt;/h2&gt;
 &lt;h3 id=&quot;%E7%A0%94%E7%A9%B6%E7%9B%AE%E6%A0%87&quot; id=&quot;研究目标&quot;&gt;研究目标&lt;/h3&gt;
 &lt;p&gt;能将正式表达改为具有twitter风格的口语表达&lt;/p&gt;
+&lt;pre class=&quot;mermaid&quot;&gt;graph LR
+	id1(Formal English) --&gt; id2(Twitter Style)&lt;/pre&gt;
 &lt;br&gt;</summary>
     
     
