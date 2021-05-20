@@ -6,7 +6,7 @@
   <link href="https://goen-kkk.github.io/atom.xml" rel="self"/>
   
   <link href="https://goen-kkk.github.io/"/>
-  <updated>2021-05-19T14:05:34.313Z</updated>
+  <updated>2021-05-20T06:40:28.074Z</updated>
   <id>https://goen-kkk.github.io/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>high</title>
+    <link href="https://goen-kkk.github.io/2021/05/20/high/"/>
+    <id>https://goen-kkk.github.io/2021/05/20/high/</id>
+    <published>2021-05-20T06:39:40.000Z</published>
+    <updated>2021-05-20T06:40:28.074Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;文章来源： 《经济学人》 Apr 10th 2021 期  Leaders 栏目&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In the rich world the era of sharp-edged capitalism &lt;strong&gt;&lt;u&gt;is giving way to&lt;/u&gt;&lt;/strong&gt; a &lt;strong&gt;&lt;u&gt;golden&lt;/u&gt;&lt;/strong&gt; age for labour.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="English" scheme="https://goen-kkk.github.io/categories/English/"/>
+    
+    
+    <category term="The Economist" scheme="https://goen-kkk.github.io/tags/The-Economist/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bert-Multi-Label-Text-Classification代码解析</title>
+    <link href="https://goen-kkk.github.io/2021/05/20/Bert-Multi-Label-Text-Classification%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/"/>
+    <id>https://goen-kkk.github.io/2021/05/20/Bert-Multi-Label-Text-Classification%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</id>
+    <published>2021-05-20T04:36:22.000Z</published>
+    <updated>2021-05-20T05:23:21.223Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;做实验时用到了&lt;a href=&quot;https://codechina.csdn.net/mirrors/lonePatient/Bert-Multi-Label-Text-Classification?utm_source=csdn_github_accelerator&quot;&gt;多标签分类&lt;/a&gt;模型，学习一下大佬是怎么写工程量这么大的代码的&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="实验" scheme="https://goen-kkk.github.io/tags/%E5%AE%9E%E9%AA%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>音频处理</title>
@@ -64,7 +103,7 @@
     <link href="https://goen-kkk.github.io/2021/05/18/Twitter-Style-Trans/"/>
     <id>https://goen-kkk.github.io/2021/05/18/Twitter-Style-Trans/</id>
     <published>2021-05-18T06:10:46.232Z</published>
-    <updated>2021-05-19T15:54:13.082Z</updated>
+    <updated>2021-05-20T03:19:16.717Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;twitter%E8%AF%AD%E8%A8%80%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB&quot; id=&quot;Twitter语言风格迁移&quot;&gt;Twitter语言风格迁移&lt;/h2&gt;

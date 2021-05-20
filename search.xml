@@ -111,6 +111,192 @@
       </tags>
   </entry>
   <entry>
+    <title>high</title>
+    <url>/2021/05/20/high/</url>
+    <content><![CDATA[<blockquote>
+<p>文章来源： 《经济学人》 Apr 10th 2021 期  Leaders 栏目</p>
+</blockquote>
+<p>In the rich world the era of sharp-edged capitalism <strong><u>is giving way to</u></strong> a <strong><u>golden</u></strong> age for labour.</p>
+<span id="more"></span>
+<ul>
+<li>
+<p>give way to : 让位于，为…替代，听凭决定</p>
+</li>
+<li>
+<p>golden : 幸福美好的，非常成功的</p>
+<p>非常生动形象，可以做为<code>happiness</code>, <code>successful</code>的替换词。</p>
+</li>
+</ul>
+<p><br>The rich world’s workers endured competition from trade, <strong>relentless</strong> technological change, more unequal wages and <strong>tepid</strong> recoveries from recessions.</p>
+<ul>
+<li>relentless: 不间断的，没完没了的
+<ul>
+<li>sth bad that is relentless continues without ever stopping or getting less severe</li>
+<li>严格的；无情的；坚决的
+<ul>
+<li>her relentless determination to succeed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>tepid: 不温不火的
+<ul>
+<li>tepid liquid is slightly warm, especially in a way that seems unpleasant.</li>
+<li>（感情，反应）不够热情的，冷淡的</li>
+</ul>
+</li>
+</ul>
+<br>
+<p>A reversal of the primacy of capital over labour <strong>beckons</strong>–and it will come sooner than you think.</p>
+<ul>
+<li>beckon: 可能发生
+<ul>
+<li>[招手]示意</li>
+<li>招手[指机会等吸引人]，吸引
+<ul>
+<li>f sth such as a place or opportunity beckons, it appears so attractive that you want to have it</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<p>the labour market is <strong>beating</strong> forecasts as economies adapt to <strong>virus-containment measures</strong>.</p>
+<ul>
+<li>beating: 超出（预期）
+<ul>
+<li>击败，战胜</li>
+<li>击打</li>
+<li>打破（记录）</li>
+<li>搅拌</li>
+<li>克服，战胜</li>
+</ul>
+</li>
+<li>virus-containment measures: 疫情防控措施</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">beat all [口]意想不到；压倒一切；了不起</span><br><span class="line">beat someone to something 在某件事上占某人之先</span><br><span class="line">beat down 打倒；杀价；大雨倾盆而下；强烈地照射下来</span><br><span class="line">beat up adj. 年久失修的；残破的;v. 暴打，痛打；抬（价）；惊动；搅拌;</span><br><span class="line">beat yourself up (about/over sth)（为某事）过分自责</span><br><span class="line">beat out 搞清；敲平；使筋疲力尽</span><br><span class="line">beat back vt. 击退，打退；驶回</span><br><span class="line">beat in 打进</span><br><span class="line">beat on 火般照晒</span><br><span class="line">beat it out （节奏强的）爵士乐</span><br><span class="line">beat for 搜索</span><br><span class="line">beat about/around the bush 旁敲侧击；拐弯抹角</span><br><span class="line">beat the clock 提前完成任务</span><br></pre></td></tr></table></figure>
+<br>
+<p>As the labour market recovers, two deeper shifts are <strong><u>unfolding</u></strong>, in politics and in technology.</p>
+<ul>
+<li>unfold：逐渐明朗；展现；打开</li>
+</ul>
+<p><mark>Robots will create armies of the idle, precarious jobs are displacing stable ones</mark> and even prosperous workers <strong><u>chained to</u></strong> emails and screens <strong><u>know in their hearts</u></strong> that their “bullshit jobs” are <strong><u>pointless</u></strong>.</p>
+<ul>
+<li>（观点）机器人的普遍应用将是很多人无所事事、不稳定的工作正取代稳定的工作</li>
+<li>be chained  to：被…拴住</li>
+<li>know in one’s heart：打心底知道</li>
+<li>pointless：无意义的</li>
+</ul>
+<p>Countries with the most <strong>automation</strong>, like Japan, enjoy some of the lowest unemployment.</p>
+<ul>
+<li>automation：自动化程度</li>
+</ul>
+<br>
+<p><strong>观点：</strong><mark>The long-term future of work has changed for the better this year because it has become more digitised. Remote working is easing the bottleneck of expensive housing in thriving cities. Home-workers report higher levels of happiness and productivity.</mark></p>
+<p>this burst of technological investment to <strong><u>bring about</u></strong> faster productivity growth, which means higher wages.</p>
+<ul>
+<li>bring about：导致，引起</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">arouse</span><br><span class="line">cause</span><br><span class="line">give rise to</span><br><span class="line">lead to </span><br><span class="line">stir up 激发；挑起</span><br><span class="line">e.g. stir oneself (into action) （使）行动</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
+      <tags>
+        <tag>The Economist</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bert-Multi-Label-Text-Classification代码解析</title>
+    <url>/2021/05/20/Bert-Multi-Label-Text-Classification%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<p>做实验时用到了<a href="https://codechina.csdn.net/mirrors/lonePatient/Bert-Multi-Label-Text-Classification?utm_source=csdn_github_accelerator">多标签分类</a>模型，学习一下大佬是怎么写工程量这么大的代码的</p>
+<span id="more"></span>
+<h3 id="%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84" id="代码结构">代码结构</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">├── pybert</span><br><span class="line">|  └── callback</span><br><span class="line">|  |  └── lrscheduler.py　　</span><br><span class="line">|  |  └── trainingmonitor.py　</span><br><span class="line">|  |  └── ...</span><br><span class="line">|  └── config</span><br><span class="line">|  |  └── basic_config.py #a configuration file for storing model parameters</span><br><span class="line">|  └── dataset　　　</span><br><span class="line">|  └── io　　　　</span><br><span class="line">|  |  └── dataset.py　　</span><br><span class="line">|  |  └── data_transformer.py　　</span><br><span class="line">|  └── model</span><br><span class="line">|  |  └── nn　</span><br><span class="line">|  |  └── pretrain　</span><br><span class="line">|  └── output #save the ouput of model</span><br><span class="line">|  └── preprocessing #text preprocessing </span><br><span class="line">|  └── train #used for training a model</span><br><span class="line">|  |  └── trainer.py </span><br><span class="line">|  |  └── ...</span><br><span class="line">|  └── common # a set of utility functions</span><br><span class="line">├── run_bert.py</span><br><span class="line">├── run_xlnet.py</span><br></pre></td></tr></table></figure>
+<p>可以看到文件非常多，但是结构非常清晰，而且大概能通过名字看出文件的功能。</p>
+<p><code>Dependencies</code>和<code>How to use</code>在给出的链接中，这里就不一一列举了，直接来看代码吧。</p>
+<br>
+<h3 id="config%E6%96%87%E4%BB%B6" id="Config文件">Config文件</h3>
+<p>路径参数放在一个文件下，可以大大提高修改时的效率，用的是<code>pathlib</code>库</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line">BASE_DIR = Path(<span class="string">r&#x27;pybert&#x27;</span>)</span><br><span class="line">config = &#123;</span><br><span class="line">    <span class="string">&#x27;raw_data_path&#x27;</span>: BASE_DIR / <span class="string">&#x27;dataset/train.csv&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;test_path&#x27;</span>: BASE_DIR / <span class="string">&#x27;dataset/test.csv&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;data_dir&#x27;</span>: BASE_DIR / <span class="string">&#x27;dataset&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;log_dir&#x27;</span>: BASE_DIR / <span class="string">&#x27;output/log&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;writer_dir&#x27;</span>: BASE_DIR / <span class="string">&quot;output/TSboard&quot;</span>,</span><br><span class="line">    <span class="string">&#x27;figure_dir&#x27;</span>: BASE_DIR / <span class="string">&quot;output/figure&quot;</span>,</span><br><span class="line">    <span class="string">&#x27;checkpoint_dir&#x27;</span>: BASE_DIR / <span class="string">&quot;output/checkpoints&quot;</span>,</span><br><span class="line">    <span class="string">&#x27;cache_dir&#x27;</span>: BASE_DIR / <span class="string">&#x27;model/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;result&#x27;</span>: BASE_DIR / <span class="string">&quot;output/result&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;bert_vocab_path&#x27;</span>: BASE_DIR / <span class="string">&#x27;pretrain/bert/base-uncased/bert_vocab.txt&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bert_config_file&#x27;</span>: BASE_DIR / <span class="string">&#x27;pretrain/bert/base-uncased/config.json&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;bert_model_dir&#x27;</span>: BASE_DIR / <span class="string">&#x27;pretrain/bert/base-uncased&#x27;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<br>
+<h3 id="%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE" id="读入数据">读入数据</h3>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">python run_bert.py --do_data</span><br></pre></td></tr></table></figure>
+<p>通过命令行参数 <code>--do_data</code>来处理数据，又是一个知识点，在工程量大的时候，argparse是一个很有用的工具</p>
+<blockquote>
+<p>argparse 模块是 Python 内置的一个用于命令项选项与参数解析的模块，argparse 模块可以让人轻松编写用户友好的命令行接口。通过在程序中定义好我们需要的参数，然后 argparse 将会从 sys.argv 解析出这些参数。argparse 模块还会自动生成帮助和使用手册，并在用户给程序传入无效参数时报出错误信息。</p>
+</blockquote>
+<br>
+<p>在<code>run_bert.py</code>文件中，调用了两个函数<code>read_data</code>和<code>train_val_split</code></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> args.do_data:</span><br><span class="line">    <span class="keyword">from</span> pybert.io.task_data <span class="keyword">import</span> TaskData</span><br><span class="line">    data = TaskData()</span><br><span class="line">    targets, sentences = data.read_data(raw_data_path=config[<span class="string">&#x27;raw_data_path&#x27;</span>],</span><br><span class="line">                                        preprocessor=EnglishPreProcessor(),</span><br><span class="line">                                        is_train=<span class="literal">True</span>)</span><br><span class="line">    data.train_val_split(X=sentences, y=targets, shuffle=<span class="literal">True</span>, stratify=<span class="literal">False</span>,</span><br><span class="line">                         valid_size=args.valid_size, data_dir=config[<span class="string">&#x27;data_dir&#x27;</span>],</span><br><span class="line">                         data_name=args.data_name)</span><br></pre></td></tr></table></figure>
+<h4 id="io%2Ftask_data.py" id="io-task-data-py">io/task_data.py</h4>
+<p>返回 sentences 和 targets 列表，分别存放句子和标签</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_data</span>(<span class="params">self,raw_data_path,preprocessor = <span class="literal">None</span>,is_train=<span class="literal">True</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    :param raw_data_path:</span></span><br><span class="line"><span class="string">    :param skip_header:</span></span><br><span class="line"><span class="string">    :param preprocessor:</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    targets, sentences = [], []</span><br><span class="line">    data = pd.read_csv(raw_data_path)</span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> data.values:</span><br><span class="line">        <span class="keyword">if</span> is_train:</span><br><span class="line">            target = row[<span class="number">2</span>:]	<span class="comment"># 训练集取真实标签</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            target = [-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>,-<span class="number">1</span>]	<span class="comment"># 测试集标签全为 -1</span></span><br><span class="line">        sentence = <span class="built_in">str</span>(row[<span class="number">1</span>])</span><br><span class="line">        <span class="keyword">if</span> preprocessor:</span><br><span class="line">            sentence = preprocessor(sentence)</span><br><span class="line">        <span class="keyword">if</span> sentence:</span><br><span class="line">            targets.append(target)</span><br><span class="line">            sentences.append(sentence)</span><br><span class="line">    <span class="keyword">return</span> targets,sentences</span><br></pre></td></tr></table></figure>
+<p>train.csv格式</p>
+<p><img src="1.png" alt="1" /></p>
+<h4 id="io%2Ftrain_val_split" id="io-train-val-split">io/train_val_split</h4>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train_val_split</span>(<span class="params">self,X, y,valid_size,stratify=<span class="literal">False</span>,shuffle=<span class="literal">True</span>,save = <span class="literal">True</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                    seed = <span class="literal">None</span>,data_name = <span class="literal">None</span>,data_dir = <span class="literal">None</span></span>):</span></span><br><span class="line">    pbar = ProgressBar(n_total=<span class="built_in">len</span>(X),desc=<span class="string">&#x27;bucket&#x27;</span>)</span><br><span class="line">    logger.info(<span class="string">&#x27;split raw data into train and valid&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>参数解析：（结合<code>run_bert.py</code>）</p>
+<ul>
+<li><code>X</code> : sentences</li>
+<li><code>y</code> : targets</li>
+<li><code>valid_size</code> : 验证集的占比</li>
+<li><code>startify</code> : 是否分层，层数 =  <code>len(list(set(y)))</code></li>
+<li><code>shuffle</code> : 是否混洗train数据集</li>
+<li><code>save</code>: 是否保存数据集(<code>.pickle</code>文件，存放（x, y）元组）</li>
+</ul>
+<p><code>pbar</code>以及<code>logger</code>还有<code>tqdm</code>都用来美化输出<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<hr />
+<br>
+<h2 id="train" id="Train">Train</h2>
+<h3 id="%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE" id="处理数据">处理数据</h3>
+<ol>
+<li>
+<p>首先是加载数据</p>
+</li>
+<li>
+<p>然后将数据包装成InputExample对象，我看了一下，就加了一个unique ID，text_b用于需要处理句子对的任务，比如提问和回答对</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InputExample</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, guid, text_a, text_b=<span class="literal">None</span>, label=<span class="literal">None</span></span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;Constructs a InputExample.</span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            guid: Unique id for the example.</span></span><br><span class="line"><span class="string">            text_a: string. The untokenized text of the first sequence. For single</span></span><br><span class="line"><span class="string">            sequence tasks, only this sequence must be specified.</span></span><br><span class="line"><span class="string">            text_b: (Optional) string. The untokenized text of the second sequence.</span></span><br><span class="line"><span class="string">            Only must be specified for sequence pair tasks.</span></span><br><span class="line"><span class="string">            label: (Optional) string. The label of the example. This should be</span></span><br><span class="line"><span class="string">            specified for train and dev examples, but not for test examples.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self.guid   = guid</span><br><span class="line">        self.text_a = text_a</span><br><span class="line">        self.text_b = text_b</span><br><span class="line">        self.label  = label</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>分词</p>
+<ul>
+<li>使用<code>Transformer</code>库中的 <code>tokenize</code>分词</li>
+<li>保证输入长度一致</li>
+<li>Token Embedding：单词的 Embedding，例如 [CLS] dog 等，通过训练学习得到。
+<ul>
+<li>[CLS] 标志放在第一个句子的首位</li>
+<li>[SEP] 标志用于分开两个输入句子，例如输入句子 A 和 B，要在句子 A，B 后面增加 [SEP] 标志。</li>
+<li>[MASK] 标志用于遮盖句子中的一些单词，将单词用 [MASK] 遮盖之后，再利用 BERT 输出的 [MASK] 向量预测单词是什么。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">tokens = [<span class="string">&#x27;[CLS]&#x27;</span>] + tokens_a + [<span class="string">&#x27;[SEP]&#x27;</span>]</span><br><span class="line">input_ids = self.tokenizer.convert_tokens_to_ids(tokens)</span><br><span class="line">input_mask = [<span class="number">1</span>] * <span class="built_in">len</span>(input_ids)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Segment Embedding：用于区分每一个单词属于句子 A 还是句子 B，如果只输入一个句子就只使用 <strong>E</strong>A，通过训练学习得到。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">segment_ids = [<span class="number">0</span>] * <span class="built_in">len</span>(tokens)</span><br><span class="line"><span class="keyword">if</span> tokens_b:</span><br><span class="line">	tokens += tokens_b + [<span class="string">&#x27;[SEP]&#x27;</span>]</span><br><span class="line">	segment_ids += [<span class="number">1</span>] * (<span class="built_in">len</span>(tokens_b) + <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Position Embedding：编码单词出现的位置，与 Transformer 使用固定的公式计算不同，BERT 的 Position Embedding 也是通过学习得到的</li>
+</ul>
+<p><img src="2.png" alt="2" /></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">InputFeature</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    A single set of features of data.</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self,input_ids,input_mask,segment_ids,label_id,input_len</span>):</span></span><br><span class="line">        self.input_ids   = input_ids</span><br><span class="line">        self.input_mask  = input_mask</span><br><span class="line">        self.segment_ids = segment_ids</span><br><span class="line">        self.label_id    = label_id</span><br><span class="line">        self.input_len = input_len</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<br>
+<hr class="footnotes-sep" />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>放三张演示图 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <tags>
+        <tag>实验</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>音频处理</title>
     <url>/2021/05/19/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<h3 id="%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7" id="音频处理工具">音频处理工具</h3>
@@ -349,10 +535,16 @@ f = 700*(10^(m/2595)-1)</p>
 <br>
 <h4 id="%E8%A1%A8%E6%83%85%E7%AC%A6" id="表情符">表情符</h4>
 <p>😊  🤔  🤣</p>
+<ul>
+<li>
 <p>怎么把这些特征融入到模型中？</p>
+</li>
+<li>
 <p>怎么确保句子的意思不变？</p>
+</li>
+</ul>
 <p>数据集</p>
-<p>【twitter对话数据】</p>
+<p>【twitter对话数据】17万对话数据，2000个非正式的回答改写成正式的风格。</p>
 ]]></content>
       <categories>
         <category>NLP</category>
