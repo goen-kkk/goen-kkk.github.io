@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    Dear-Sir论文阅读笔记 |
+    信息检索project |
     
     Mendale’s Blog</title>
   
@@ -31,7 +31,7 @@
 <body>
   <main class="content">
     <section class="outer">
-  <article id="post-Dear-Sir论文阅读笔记" class="article article-type-post" itemscope
+  <article id="post-信息检索project" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -40,7 +40,7 @@
       
 
 <h1 class="article-title" itemprop="name">
-  Dear-Sir论文阅读笔记
+  信息检索project
 </h1>
 
 
@@ -50,14 +50,10 @@
 
     
     <div class="article-meta">
-      <a href="/2021/05/18/Dear-Sir%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2021-05-18T06:43:32.401Z" itemprop="datePublished">2021-05-18</time>
+      <a href="/2021/05/21/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2project/" class="article-date">
+  <time datetime="2021-05-21T12:19:57.000Z" itemprop="datePublished">2021-05-21</time>
 </a>
       
-<div class="article-category">
-  <a class="article-category-link" href="/categories/NLP/">NLP</a>
-</div>
-
     </div>
     
 
@@ -71,78 +67,78 @@
       
       
       
-      <p><em>Dear Sir or Madam, May I Introduce the GYAFC Dataset: Corpus, Benchmarks and Metrics for Formality Style Transfer</em></p>
+      <h2 id="project%EF%BC%9A%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%AE%9E%E7%8E%B0" id="Project：搜索引擎实现">Project：搜索引擎实现</h2>
+<h3 id="%E4%BB%BB%E5%8A%A1" id="任务">任务</h3>
+<p>搜索引擎</p>
 <span id="more"></span>
-<h3 id="%E4%B8%BB%E8%A6%81%E8%B4%A1%E7%8C%AE" id="主要贡献">主要贡献</h3>
+<h3 id="%E5%AE%9E%E7%8E%B0" id="实现">实现</h3>
 <ul>
 <li>
-<p>GYAFC数据集</p>
+<p>编程语言不限（推荐Python）</p>
 </li>
 <li>
-<p>Benchmark：受启发于Low source MT，PBMT和NMT</p>
+<p>可以使用<strong>Lucene</strong><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>构造索引</p>
 </li>
 <li>
-<p>Metrixs：评价指标</p>
-<ul>
-<li>formality</li>
-<li>fluency</li>
-<li>meaning preservation</li>
-</ul>
+<p>自己实现文档相关性评分功能</p>
 </li>
 </ul>
-<h3 id="gyafc-%E6%95%B0%E6%8D%AE%E9%9B%86" id="GYAFC-数据集">GYAFC 数据集</h3>
-<p>来源：Yahoo Answers L6 corpus</p>
-<p><img src="Figure2.png" alt="1" /></p>
-<ul>
+<h3 id="%E8%A6%81%E6%B1%82" id="要求">要求</h3>
+<ol>
 <li>
-<p>预处理数据集</p>
-</li>
-<li>
-<p>训练分类器：-3 (very informal) to 3 (very formal) PT16</p>
+<p>预处理</p>
 <ul>
-<li>5000条人工标注数据from L6</li>
+<li>是否展示词干</li>
+<li>是否区分大小写</li>
+<li>是否处理数字</li>
+<li>是否处理标点符号</li>
 </ul>
 </li>
 <li>
-<p>选取E&amp;M和F&amp;R领域</p>
+<p>TopN</p>
+<ul>
+<li>
+<p>前N个（可配置的）结果应通过控制台/屏幕返回，并附有排名、分数、docID和摘要片段，建议格式如下</p>
+<p><img src="E:%5Cgoen-kkk.github.io%5Csource_posts%5C%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2project%5C%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2-%E6%9C%9F%E6%9C%AB%E5%AE%9E%E9%AA%8C.jpg" alt="" /></p>
 </li>
 </ul>
-<p><img src="Table3.png" alt="2" /></p>
+</li>
+<li>
+<p>查询</p>
 <ul>
-<li>使用训练集，双向训练风格迁移模型</li>
-<li>每一个方向的原数据都有3种不同的改写</li>
-</ul>
-<pre class="mermaid">graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;</pre>
-<h4 id="%E5%88%86%E6%9E%90" id="分析">分析</h4>
+<li>简单的命令行查询
 <ul>
-<li>edit distance (<em>Levenshtein</em> Distance)</li>
-<li>formality score
-<ul>
-<li>分类器</li>
+<li>无序查询 e.g. # search new york san franciscco</li>
+<li>布尔查询 e.g. # search apple AND cider</li>
 </ul>
 </li>
-<li>定量分析：
+<li>3种查询
 <ul>
-<li>phrasal paraphrases (47%)</li>
-<li>edits to punctuations (40%)</li>
-<li>expansion of contractions (12%).</li>
-<li>capitalization (46%) and normalization (10%)</li>
+<li>Q1 - hurricane</li>
+<li>Q2 - mitch george</li>
+<li>Q3 - bill AND Clinton OR israel</li>
 </ul>
 </li>
+<li>如果提供不同检索策略之间的定量比较（功能性或非功能性），将获得额外的分数。</li>
 </ul>
+</li>
+</ol>
+<hr class="footnotes-sep" />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>相关资料：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000013822385">https://segmentfault.com/a/1190000013822385</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://goen-kkk.github.io/2021/05/18/Dear-Sir%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/" data-id="ckou13qq60005fkw881sp3445" class="article-share-link">
+      <a data-url="https://goen-kkk.github.io/2021/05/21/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2project/" data-id="ckp7vehvi000qukw89blv41pw" class="article-share-link">
         Share
       </a>
       
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90/" rel="tag">自然语言生成</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a></li></ul>
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a></li></ul>
 
     </footer>
 
@@ -152,19 +148,10 @@
   
 <nav class="article-nav">
   
-  <a href="/2021/05/19/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/" class="article-nav-link">
-    <strong class="article-nav-caption">Newer</strong>
-    <div class="article-nav-title">
-      
-      音频处理
-      
-    </div>
-  </a>
   
-  
-  <a href="/2021/05/18/Twitter-Style-Trans/" class="article-nav-link">
+  <a href="/2021/05/20/%E5%AE%9D%E8%97%8F%E5%B7%A5%E5%85%B7-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AF%87/" class="article-nav-link">
     <strong class="article-nav-caption">Older</strong>
-    <div class="article-nav-title">Twitter-Style-Trans</div>
+    <div class="article-nav-title">宝藏工具--语言学习篇</div>
   </a>
   
 </nav>
