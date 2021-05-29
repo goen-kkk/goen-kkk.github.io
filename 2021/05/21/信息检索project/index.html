@@ -88,7 +88,7 @@
 <li>
 <p>预处理</p>
 <ul>
-<li>是否展示词干</li>
+<li>是否还原词干</li>
 <li>是否区分大小写</li>
 <li>是否处理数字</li>
 <li>是否处理标点符号</li>
@@ -99,7 +99,7 @@
 <ul>
 <li>
 <p>前N个（可配置的）结果应通过控制台/屏幕返回，并附有排名、分数、docID和摘要片段，建议格式如下</p>
-<p><img src="E:%5Cgoen-kkk.github.io%5Csource_posts%5C%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2project%5C%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2-%E6%9C%9F%E6%9C%AB%E5%AE%9E%E9%AA%8C.jpg" alt="" /></p>
+<p><img src="%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2-%E6%9C%9F%E6%9C%AB%E5%AE%9E%E9%AA%8C.jpg" alt="" /></p>
 </li>
 </ul>
 </li>
@@ -123,10 +123,33 @@
 </ul>
 </li>
 </ol>
+<hr />
+<h3 id="news-searching-engine" id="News-Searching-Engine">News Searching Engine</h3>
+<h4 id="%E7%8E%AF%E5%A2%83" id="环境">环境</h4>
+<ul>
+<li>
+<p>编程语言：<em>Life is short, I need Python</em></p>
+</li>
+<li>
+<p>使用<strong>Whoosh</strong><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>库构建索引</p>
+</li>
+<li>
+<p><code>requirements</code>：</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">python == <span class="number">3.7</span><span class="number">.10</span></span><br><span class="line">whoosh == <span class="number">2.7</span><span class="number">.4</span></span><br><span class="line">nltk == <span class="number">3.6</span><span class="number">.2</span></span><br><span class="line"><span class="comment"># 词干还原依赖的语料库</span></span><br><span class="line">nltk.download(<span class="string">&quot;wordnet&quot;</span>)</span><br><span class="line">nltk.download(<span class="string">&quot;averaged_perceptron_tagger&quot;</span>)</span><br><span class="line">nltk.download(<span class="string">&quot;punkt&quot;</span>)</span><br><span class="line">nltk.download(<span class="string">&quot;maxnet_treebank_pos_tagger&quot;</span>)</span><br></pre></td></tr></table></figure>
+<br>
+<h4 id="%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD" id="实现功能">实现功能</h4>
+<p>✅ 词干还原</p>
+<p>✅ 大小写不敏感</p>
+<p>✅ 去除标点，空字符， ’s …</p>
+<p>✅ 评分算法：WF_IDF，BM25</p>
 <hr class="footnotes-sep" />
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>相关资料：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000013822385">https://segmentfault.com/a/1190000013822385</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>whoosh文档：<a target="_blank" rel="noopener" href="https://whoosh.readthedocs.io/en/latest/index.html">https://whoosh.readthedocs.io/en/latest/index.html</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
