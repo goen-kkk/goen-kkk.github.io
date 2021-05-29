@@ -6,7 +6,7 @@
   <link href="https://goen-kkk.github.io/atom.xml" rel="self"/>
   
   <link href="https://goen-kkk.github.io/"/>
-  <updated>2021-05-29T11:02:49.253Z</updated>
+  <updated>2021-05-29T13:32:33.737Z</updated>
   <id>https://goen-kkk.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://goen-kkk.github.io/2021/05/21/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2project/"/>
     <id>https://goen-kkk.github.io/2021/05/21/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2project/</id>
     <published>2021-05-21T12:19:57.000Z</published>
-    <updated>2021-05-29T11:02:49.253Z</updated>
+    <updated>2021-05-29T13:32:33.737Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;project%EF%BC%9A%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%AE%9E%E7%8E%B0&quot; id=&quot;Project：搜索引擎实现&quot;&gt;Project：搜索引擎实现&lt;/h2&gt;
@@ -32,6 +32,8 @@
     
     
     <category term="实验" scheme="https://goen-kkk.github.io/tags/%E5%AE%9E%E9%AA%8C/"/>
+    
+    <category term="信息检索" scheme="https://goen-kkk.github.io/tags/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2/"/>
     
   </entry>
   
@@ -59,11 +61,11 @@
   </entry>
   
   <entry>
-    <title>high</title>
+    <title>Riding high</title>
     <link href="https://goen-kkk.github.io/2021/05/20/high/"/>
     <id>https://goen-kkk.github.io/2021/05/20/high/</id>
     <published>2021-05-20T06:39:40.000Z</published>
-    <updated>2021-05-20T06:40:28.074Z</updated>
+    <updated>2021-05-29T13:23:47.635Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -104,7 +106,7 @@
     <link href="https://goen-kkk.github.io/2021/05/19/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/"/>
     <id>https://goen-kkk.github.io/2021/05/19/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/</id>
     <published>2021-05-19T13:57:08.000Z</published>
-    <updated>2021-05-19T14:05:34.313Z</updated>
+    <updated>2021-05-29T13:31:59.550Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7&quot; id=&quot;音频处理工具&quot;&gt;音频处理工具&lt;/h3&gt;
@@ -118,6 +120,8 @@
     
     
     <category term="实验" scheme="https://goen-kkk.github.io/tags/%E5%AE%9E%E9%AA%8C/"/>
+    
+    <category term="音频处理" scheme="https://goen-kkk.github.io/tags/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
