@@ -6,7 +6,7 @@
   <link href="https://goen-kkk.github.io/atom.xml" rel="self"/>
   
   <link href="https://goen-kkk.github.io/"/>
-  <updated>2021-08-03T13:41:35.307Z</updated>
+  <updated>2021-08-16T14:34:26.284Z</updated>
   <id>https://goen-kkk.github.io/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KNN</title>
+    <link href="https://goen-kkk.github.io/2021/08/13/knn/"/>
+    <id>https://goen-kkk.github.io/2021/08/13/knn/</id>
+    <published>2021-08-13T12:45:32.000Z</published>
+    <updated>2021-08-16T14:34:26.284Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Thomas Sauerwald&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cambridge University&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="ML" scheme="https://goen-kkk.github.io/categories/ML/"/>
+    
+    
+    <category term="笔记" scheme="https://goen-kkk.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linear_regression</title>
+    <link href="https://goen-kkk.github.io/2021/08/13/linear-regression/"/>
+    <id>https://goen-kkk.github.io/2021/08/13/linear-regression/</id>
+    <published>2021-08-13T12:45:20.000Z</published>
+    <updated>2021-08-13T12:45:20.680Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一阶谓词逻辑</title>
+    <link href="https://goen-kkk.github.io/2021/08/13/%E4%B8%80%E9%98%B6%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/"/>
+    <id>https://goen-kkk.github.io/2021/08/13/%E4%B8%80%E9%98%B6%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/</id>
+    <published>2021-08-13T11:53:03.000Z</published>
+    <updated>2021-08-13T11:53:03.072Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SVM</title>
+    <link href="https://goen-kkk.github.io/2021/08/13/SVM/"/>
+    <id>https://goen-kkk.github.io/2021/08/13/SVM/</id>
+    <published>2021-08-13T11:52:39.000Z</published>
+    <updated>2021-08-13T11:52:39.751Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>reasoning_system</title>
@@ -42,7 +103,7 @@
     <link href="https://goen-kkk.github.io/2021/07/20/%E5%89%91%E6%A1%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%BE%E7%A8%8B/"/>
     <id>https://goen-kkk.github.io/2021/07/20/%E5%89%91%E6%A1%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%BE%E7%A8%8B/</id>
     <published>2021-07-20T11:35:48.000Z</published>
-    <updated>2021-08-03T13:24:17.550Z</updated>
+    <updated>2021-08-16T10:27:14.968Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Warming-up-Mathematical-Foundation-7-20&quot;&gt;Warming up - Mathematical Foundation - 7.20&lt;/h2&gt;</summary>

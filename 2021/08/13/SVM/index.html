@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    categories.ejs: undefined |
+    SVM |
     
     Mendale’s Blog</title>
   
@@ -35,83 +35,108 @@
 <body>
   <main class="content">
     <section class="outer">
-  <article class="articles">
+  <article id="post-SVM" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
     
-    <h1 class="page-type-title">ML</h1>
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2021" class="archive-year">2021</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/08/13/knn/" class="archive-article-date">
-  <time datetime="2021-08-13T12:45:32.000Z" itemprop="datePublished">08/13</time>
-</a>
+    <header class="article-header">
       
 
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/08/13/knn/">KNN</a>
-</h2>
+<h1 class="article-title" itemprop="name">
+  SVM
+</h1>
 
 
 
     </header>
     
-    
-<div class="article-category">
-  <a class="article-category-link" href="/categories/ML/">ML</a>
-</div>
 
     
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2021/07/20/%E5%89%91%E6%A1%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%BE%E7%A8%8B/" class="archive-article-date">
-  <time datetime="2021-07-20T11:35:48.000Z" itemprop="datePublished">07/20</time>
+    <div class="article-meta">
+      <a href="/2021/08/13/SVM/" class="article-date">
+  <time datetime="2021-08-13T11:52:39.000Z" itemprop="datePublished">2021-08-13</time>
 </a>
       
-
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2021/07/20/%E5%89%91%E6%A1%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%AF%BE%E7%A8%8B/">剑桥人工智能课程</a>
-</h2>
-
-
-
-    </header>
+    </div>
     
-    
-<div class="article-category">
-  <a class="article-category-link" href="/categories/ML/">ML</a>
-</div>
 
     
     
-  </div>
-</article>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
       
       
     </div>
+    <footer class="article-footer">
+      <a data-url="https://goen-kkk.github.io/2021/08/13/SVM/" data-id="ckseh6wsk00002kw8bnux4gxd" class="article-share-link">
+        Share
+      </a>
+      
+    </footer>
+
   </div>
+
   
+  
+<nav class="article-nav">
+  
+  <a href="/2021/08/13/%E4%B8%80%E9%98%B6%E8%B0%93%E8%AF%8D%E9%80%BB%E8%BE%91/" class="article-nav-link">
+    <strong class="article-nav-caption">Newer</strong>
+    <div class="article-nav-title">
+      
+      一阶谓词逻辑
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2021/08/03/reasoning-system/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title">reasoning_system</div>
+  </a>
+  
+</nav>
+
   
 
   
+  
+  
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '230adc40d9d7a3e50b5c',
+    clientSecret: '1db3e4d5aa412bcce6617dfec4fe9b8dddf522e4',
+    repo: 'gitalk',
+    owner: 'goen-kkk',
+    admin: ['goen-kkk'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+  
+
+
+</article>
 </section>
     <footer class="footer">
   <div class="outer">
@@ -119,6 +144,8 @@
       <ul class="list-inline">
   
   <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
   
 </ul>
     </div>
@@ -221,6 +248,23 @@
 
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
 
 
 
