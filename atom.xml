@@ -6,7 +6,7 @@
   <link href="https://goen-kkk.github.io/atom.xml" rel="self"/>
   
   <link href="https://goen-kkk.github.io/"/>
-  <updated>2021-08-18T02:31:29.252Z</updated>
+  <updated>2021-08-27T12:56:54.424Z</updated>
   <id>https://goen-kkk.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>decision-tree</title>
+    <link href="https://goen-kkk.github.io/2021/08/27/decision-tree/"/>
+    <id>https://goen-kkk.github.io/2021/08/27/decision-tree/</id>
+    <published>2021-08-27T12:56:54.000Z</published>
+    <updated>2021-08-27T12:56:54.424Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Online Learning</title>
+    <link href="https://goen-kkk.github.io/2021/08/19/online-learning/"/>
+    <id>https://goen-kkk.github.io/2021/08/19/online-learning/</id>
+    <published>2021-08-19T02:46:14.000Z</published>
+    <updated>2021-09-04T14:31:33.994Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Thomas Sauerwald，Sven&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cambridge University&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="ML" scheme="https://goen-kkk.github.io/categories/ML/"/>
+    
+    
+    <category term="笔记" scheme="https://goen-kkk.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>KNN</title>
@@ -123,27 +158,6 @@
     
     
     <category term="笔记" scheme="https://goen-kkk.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>花语</title>
-    <link href="https://goen-kkk.github.io/2021/07/06/%E8%8A%B1%E8%AF%AD/"/>
-    <id>https://goen-kkk.github.io/2021/07/06/%E8%8A%B1%E8%AF%AD/</id>
-    <published>2021-07-06T14:07:19.000Z</published>
-    <updated>2021-07-28T09:37:52.283Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;span</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
