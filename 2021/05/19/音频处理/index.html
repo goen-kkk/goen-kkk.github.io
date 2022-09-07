@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    音频处理 |
+    
+    Mendale’s Blog</title>
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Mendale’s Blog" type="application/atom+xml">
+</head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-音频处理" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  音频处理
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/05/19/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/" class="article-date">
+  <time datetime="2021-05-19T13:57:08.000Z" itemprop="datePublished">2021-05-19</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/python/">python</a>
+</div>
+
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h3 id="%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7" id="音频处理工具">音频处理工具</h3>
+<p>Librosa库，是python的一个音频处理的包</p>
+<p>安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install librosa</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h4 id="%E8%AF%BB%E5%8F%96%E9%9F%B3%E9%A2%91%2F%E6%B3%A2%E5%BD%A2%E6%96%87%E4%BB%B6" id="读取音频-波形文件">读取音频/波形文件</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">signal, sample_rate = librosa.load(path=<span class="string">&#x27;chew.wav&#x27;</span>,sr,mono,offset,duration)</span><br></pre></td></tr></table></figure>
+<h5 id="%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0" id="函数参数">函数参数</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">path</td>
+<td style="text-align:center">音频路径</td>
+</tr>
+<tr>
+<td style="text-align:center">sr</td>
+<td style="text-align:center">采样率（默认22050，但是有重采样的功能）</td>
+</tr>
+<tr>
+<td style="text-align:center">mono</td>
+<td style="text-align:center">设置为true是单通道，否则是双通道</td>
+</tr>
+<tr>
+<td style="text-align:center">offset</td>
+<td style="text-align:center">音频读取的时间</td>
+</tr>
+<tr>
+<td style="text-align:center">duration</td>
+<td style="text-align:center">获取音频的时长</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回：</strong></p>
+<ul>
+<li><em>y</em> ：音频时间序列，一维numpy数组</li>
+<li><em>s</em> ：音频的采样率</li>
+</ul>
+<h5 id="%E9%87%87%E6%A0%B7%E7%8E%87" id="采样率">采样率</h5>
+<p>采样率即在一秒的音频时间里进行采样的次数，采样率为20k时即是一秒钟对音频进行20000次采样。<br />
+根据香农采样定理，想要完整地还原声音，采样率至少要为音频中最高频率的2倍。<br />
+人耳的可感知频率是20-20khz，因此为真实地还原音频，CD采用了40+kHz的采样率。</p>
+<h4 id="%E7%BB%98%E5%88%B6%E6%B3%A2%E5%BD%A2%E5%9B%BE" id="绘制波形图">绘制波形图</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">librosa.display.waveplot(signal, sample_rate)</span><br></pre></td></tr></table></figure>
+<p><img src="%E6%B3%A2%E5%BD%A2%E5%9B%BE.png" alt="波形图" /></p>
+<h4 id="%E7%BB%98%E5%88%B6%E5%A3%B0%E8%B0%B1%E5%9B%BE" id="绘制声谱图">绘制声谱图</h4>
+<p>声音信号是一维信号，直观上只能看到时域信息，不能看到频域信息。通过傅里叶变换(FT)可以变换到频域，但是丢失了时域信息，无法看到时频关系。声谱图是声音或其他信号的频率随时间变化时的频谱（spectrum）的一种直观表示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D = librosa.amplitude_to_db(np.<span class="built_in">abs</span>(librosa.stft(signal)), ref=np.<span class="built_in">max</span>)</span><br><span class="line">librosa.display.specshow(D, y_axis=<span class="string">&#x27;linear&#x27;</span>)</span><br><span class="line">plt.colorbar(<span class="built_in">format</span> = <span class="string">&#x27;%+2.0f dB&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Linear-frequency power spectrogram of aloe&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="%E5%A3%B0%E8%B0%B1%E5%9B%BE.png" alt="过零率" /></p>
+<h4 id="%E8%BF%87%E9%9B%B6%E7%8E%87%EF%BC%88zero-crossing-rate%EF%BC%89" id="过零率（Zero-Crossing-Rate）">过零率（Zero Crossing Rate）</h4>
+<p>过零率（zero crossing rate）是一个信号符号变化的比率，即，在每帧中，语音信号从正变为负或从负变为正的次数。 这个特征已在语音识别和音乐信息检索领域得到广泛使用，通常对类似金属、摇滚等高冲击性的声音的具有更高的价值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zero_crossings = librosa.zero_crossings(signal, pad=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="%E9%A2%91%E8%B0%B1%E8%B4%A8%E5%BF%83-%EF%BC%88spectral-centroid%EF%BC%89" id="频谱质心-（Spectral-Centroid）">频谱质心 （Spectral Centroid）</h4>
+<p>谱质心(Spectral Centroid)是描述音色属性的重要物理参数之一，是频率成分的重心，是在一定频率范围内通过能量加权平均的频率，其单位是Hz。它是声音信号的频率分布和能量分布的重要信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">spectral_centroids = librosa.feature.spectral_centroid(signal, sample_rate)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算时间变量</span></span><br><span class="line">frames = <span class="built_in">range</span>(<span class="built_in">len</span>(spectral_centroids))</span><br><span class="line">t = librosa.frames_to_time(frames)</span><br><span class="line"><span class="comment"># 归一化频谱质心</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span>(<span class="params">x, axis=<span class="number">0</span></span>):</span></span><br><span class="line">    <span class="keyword">return</span> sklearn.preprocessing.minmax_scale(x, axis=axis)</span><br><span class="line"><span class="comment"># 沿波形绘制频谱质心</span></span><br><span class="line">librosa.display.waveplot(signal, sample_rate, alpha=<span class="number">0.4</span>)</span><br><span class="line">plt.plot(t, normalize(spectral_centroids), color=<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.savefig(<span class="string">&quot;spectral_C.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="spectral_C.png" alt="spectral_C" /></p>
+<h4 id="%E5%A3%B0%E8%B0%B1%E8%A1%B0%E5%87%8F-(spectral-roll-off%EF%BC%89" id="声谱衰减-Spectral-Roll-off）">声谱衰减 (Spectral Roll-off）</h4>
+<p>声谱衰减是对声音信号形状（波形图）的一种衡量，表示低于总频谱能量的指定百分比的频率(默认为85%)。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">spectral_rolloff = librosa.feature.spectral_rolloff(signal+<span class="number">0.01</span>, sample_rate)[<span class="number">0</span>]</span><br><span class="line">librosa.display.waveplot(signal, sample_rate, alpha=<span class="number">0.4</span>)</span><br><span class="line">plt.plot(t, normalize(spectral_rolloff), color=<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">plt.savefig(<span class="string">&quot;spectral_R.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="spectral_R.png" alt="spectral_R" /></p>
+<h4 id="%E8%89%B2%E5%BA%A6%E9%A2%91%E7%8E%87-%EF%BC%88chroma-frequencies%EF%BC%89" id="色度频率-（Chroma-Frequencies）">色度频率 （Chroma Frequencies）</h4>
+<p>色度频率是音乐音频有趣且强大的表示，其中整个频谱被投影到12个区间，代表音乐八度音的12个不同的半音（或色度）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hop_length = <span class="number">512</span></span><br><span class="line">chromagram =librosa.feature.chroma_stft(signal,sample_rate,</span><br><span class="line">                                         hop_length=hop_length )</span><br><span class="line">plt.figure( figsize=(<span class="number">15</span>,<span class="number">5</span> ))</span><br><span class="line">librosa.display.specshow(chromagram, x_axis=<span class="string">&#x27;time&#x27;</span>, y_axis=<span class="string">&#x27;chroma&#x27;</span>,</span><br><span class="line">                        hop_length=hop_length,cmap=<span class="string">&#x27;coolwarm&#x27;</span> )</span><br><span class="line">plt.savefig(<span class="string">&quot;chroma_F.png&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="chroma_F.png" alt="chroma_F" /></p>
+<h4 id="mfcc-%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%EF%BC%88-mel-frequency-cepstral-coefficents%EF%BC%89" id="MFCC-特征提取（-Mel-Frequency-Cepstral-Coefficents）">MFCC 特征提取（ Mel Frequency Cepstral Coefficents）</h4>
+<p>感知实验表明，人耳对于声音信号的感知聚焦于某一特定频率区域内，而非在整个频谱包络中。耳蜗的滤波作用是在对数频率尺度进行的，在1000Hz以下为线性，在1000Hz以上为对数，这就使得人耳对低频比高频更敏感。<br />
+心理物理学研究表明，人类对语音信号频率内容的感知遵循一种主观上定义的非线性尺度，该非线性标度可被称为“Mel”标度。<br />
+一般来说，声音的频率和人耳所听到的声音高低不成正比，而是与音调(人们为了描述声音高低而定义的概念)成正比，声音的频率分布与临界频带分布相一致。梅尔频率标度的单位是 Mel，它是为了描绘音调而被定义出来的，它更生动地反映出了频率和音调的非线性关系。<br />
+MFCC是将人耳的听觉感知特性和语音产生机制相结合，因此目前大多数语音识别系统广泛使用这种特征。对频率轴不均匀划分是MFCC特征区别于前面普通倒谱特征的最重要的特点，变换到Mel域后，Mel带通滤波器组的中心频率是按照Mel刻度均匀排列的。<br />
+语音的MFCC特征是基于人耳感知实验得到，将人耳当成特定的滤波器，只考虑某些特定频率成分。这些滤波器是在频域上不均匀分布的。更多的滤波器聚集于低频部分，高频部分的滤波器较少。<br />
+梅尔频率倒谱系数（Mel Frequency Cepstrum Coefficient, MFCC）考虑到了人类的听觉特征，先将线性频谱映射到基于听觉感知的Mel非线性频谱中，然后转换到倒谱上。</p>
+<p><strong>过程</strong></p>
+<p>1、对语音信号进行预加重、分帧和加窗处理；<br />
+2、用周期图(periodogram)法来进行功率谱(power spectrum)估计；（短时傅里叶变换）<br />
+3、对功率谱用Mel滤波器组进行滤波，计算每个滤波器里的能量；（梅尔频谱）<br />
+4、对每个滤波器的能量取log；（log梅尔频谱）<br />
+5、进行离散余弦变换（DCT）变换；（梅尔倒谱）<br />
+6、保留DCT的第2-13个系数，去掉其它。（MFCC特征）</p>
+<p><img src="MFCC.png" alt="MFCC" /></p>
+<p><strong>预加重</strong></p>
+<p>预加重其实就是将语音信号通过一个高通滤波器，来增强语音信号中的高频部分，并保持在低频到高频的整个频段中，能够使用同样的信噪比求频谱。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Pre-Emphasis 预加重</span></span><br><span class="line"><span class="string">第一步是对信号应用预加重滤波器，以放大高频。 预加重滤波器在几种方面有用：</span></span><br><span class="line"><span class="string">（1）平衡频谱，因为高频通常比低频具有较小的幅度；</span></span><br><span class="line"><span class="string">（2）避免在傅立叶变换操作期间出现数值问题；</span></span><br><span class="line"><span class="string">（3）还可改善信号 噪声比（SNR）。</span></span><br><span class="line"><span class="string">可以使用以下公式中的一阶滤波器将预加重滤波器应用于信号x：</span></span><br><span class="line"><span class="string">            y(t)=x(t) -αx(t-1)</span></span><br><span class="line"><span class="string">使用以下代码行即可轻松实现，其中滤波器系数（α）的典型值为0.95或0.97，</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pre_emphasis</span>(<span class="params">signal, coefficient=<span class="number">0.97</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;对信号进行预加重&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> numpy.append(signal[<span class="number">0</span>], signal[<span class="number">1</span>:] - coefficient * signal[:-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p><strong>分帧</strong></p>
+<p>分帧是指在跟定的音频样本文件中，按照某一个固定的时间长度分割，分割后的每一片样本，称之为一帧，这里需要区分时域波形中的帧，分割后的一帧是分析提取MFCC的样本，而时域波形中的帧是时域尺度上对音频的采样而取到的样本。</p>
+<p>分帧是先将N个采样点集合成一个观测单位，也就是分割后的帧。通常情况下N的取值为512或256，涵盖的时间约为20-30ms。也可以根据特定的需要进行N值和窗口间隔的调整。为了避免相邻两帧的变化过大，会让两相邻帧之间有一段重叠区域，此重叠区域包含了M个取样点，一般M的值约为N的1/2或1/3。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">audio2frame</span>(<span class="params">signal, frame_length, frame_step, winfunc=<span class="keyword">lambda</span> x: np.ones(<span class="params">(<span class="params">x,</span>)</span>)</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;分帧&#x27;&#x27;&#x27;</span></span><br><span class="line">    signal_length = <span class="built_in">len</span>(signal)</span><br><span class="line">    frame_length = <span class="built_in">int</span>(<span class="built_in">round</span>(frame_length)) <span class="comment"># 四舍五入</span></span><br><span class="line">    frame_step = <span class="built_in">int</span>(<span class="built_in">round</span>(frame_step))</span><br><span class="line">    <span class="comment"># 确保我们至少有1帧</span></span><br><span class="line">    <span class="keyword">if</span> signal_length &lt;= frame_length:</span><br><span class="line">        frames_num = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        frames_num = <span class="number">1</span> + <span class="built_in">int</span>(math.ceil((<span class="number">1.0</span> * signal_length - frame_length) / frame_step))</span><br><span class="line">    <span class="comment"># 填充信号，确保所有帧的采样数相等，而不从原始信号中截断任何采样</span></span><br><span class="line">    pad_length = <span class="built_in">int</span>((frames_num - <span class="number">1</span>) * frame_step + frame_length)</span><br><span class="line">    zeros = np.zeros((pad_length - signal_length,))</span><br><span class="line">    pad_signal = np.concatenate((signal, zeros))</span><br><span class="line">    indices = np.tile(np.arange(<span class="number">0</span>, frame_length), (frames_num, <span class="number">1</span>)) + np.tile(np.arange(<span class="number">0</span>, frames_num * frame_step, frame_step),(frame_length, <span class="number">1</span>)).T</span><br><span class="line">    indices = np.array(indices, dtype=np.int32)</span><br><span class="line">    frames = pad_signal[indices]</span><br><span class="line">    win = np.tile(winfunc(frame_length), (frames_num, <span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> frames * win</span><br></pre></td></tr></table></figure>
+<p><strong>加窗</strong></p>
+<p>在对音频进行分帧之后，需要对每一帧进行加窗，以增加帧左端和右端的连续性，减少频谱泄漏。在提取MFCC的时候，比较常用的窗口函数为Hamming窗。</p>
+<p>假设分帧后的信号为 S(n),n=0,1,2…,N-1，其中N为帧的大小，那么进行加窗的处理则为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">frames *= numpy.hamming(frame_length)</span><br><span class="line"><span class="comment"># frames *= 0.54 - 0.46 * numpy.cos((2 * numpy.pi * n) / (frame_length - 1))  # 内部实现</span></span><br></pre></td></tr></table></figure>
+<p><strong>FFT</strong></p>
+<p>由于信号在时域上的变换通常很难看出信号的特性，通常对它做FFT变换转换为频域上的能量分布来观察，不同的能量分布，就能代表不同语音的特性。</p>
+<p>接下来我们对分帧加窗后的各帧信号进行做一个N点FFT来<strong>计算频谱</strong>，也称为短时傅立叶变换（STFT），其中N通常为256或512，NFFT＝512；</p>
+<p><img src="FFT.png" alt="FFT" /></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NFFT = <span class="number">512</span></span><br><span class="line">mag_frames = numpy.absolute(numpy.fft.rfft(frames, NFFT))   <span class="comment"># fft的幅度(magnitude)</span></span><br></pre></td></tr></table></figure>
+<p><strong>功率谱</strong></p>
+<p>然后我们使用以下公式计算<strong>功率谱</strong>（周期图periodogram），对语音信号的频谱取模平方（取对数或者去平方，因为频率不可能为负，负值要舍去）得到语音信号的谱线能量。</p>
+<p><img src="PS.png" alt="PS" /></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pow_frames = ((<span class="number">1.0</span> / NFFT) * ((mag_frames) ** <span class="number">2</span>))  <span class="comment"># 功率谱</span></span><br></pre></td></tr></table></figure>
+<p><strong>滤波器组</strong></p>
+<p>计算滤波器组的最后一步是将三角滤波器（通常为40个滤波器，在Mel等级上为nfilt = 40）应用于功率谱以提取频带。<br />
+梅尔音阶的目的是模仿低频的人耳对声音的感知，方法是在较低频率下更具判别力，而在较高频率下则具有较少判别力。<br />
+我们可以使用以下公式在赫兹（f）和梅尔（m）之间转换：<br />
+m = 2595log10(1+f/700)<br />
+f = 700*(10^(m/2595)-1)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hz2mel</span>(<span class="params">hz</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;把频率hz转化为梅尔频率&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2595</span> * np.log10(<span class="number">1</span> + hz / <span class="number">700.0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mel2hz</span>(<span class="params">mel</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;把梅尔频率转化为hz&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">700</span> * (<span class="number">10</span> ** (mel / <span class="number">2595.0</span>) - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_filter_banks</span>(<span class="params">filters_num=<span class="number">40</span>, NFFT=<span class="number">512</span>, samplerate=<span class="number">16000</span>, low_freq=<span class="number">0</span>, high_freq=<span class="literal">None</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;计算梅尔三角间距滤波器，该滤波器在第一个频率和第三个频率处为0，在第二个频率处为1&#x27;&#x27;&#x27;</span></span><br><span class="line">    low_mel = hz2mel(low_freq)</span><br><span class="line">    high_mel = hz2mel(high_freq)</span><br><span class="line">    <span class="comment"># 我们要做n个滤波器组，为此需要n+2个点，这意味着在们需要low_mel和high_mel之间线性间隔n个点</span></span><br><span class="line">    mel_points = np.linspace(low_mel, high_mel, filters_num + <span class="number">2</span>)</span><br><span class="line">    hz_points = mel2hz(mel_points)</span><br><span class="line">    <span class="built_in">bin</span> = np.floor((NFFT + <span class="number">1</span>) * hz_points / samplerate)</span><br><span class="line">    fbank = np.zeros([filters_num, <span class="built_in">int</span>(np.floor(NFFT / <span class="number">2</span> + <span class="number">1</span>))])</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, filters_num):</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(<span class="built_in">bin</span>[j]), <span class="built_in">int</span>(<span class="built_in">bin</span>[j + <span class="number">1</span>])):</span><br><span class="line">            fbank[j, i] = (i - <span class="built_in">bin</span>[j]) / (<span class="built_in">bin</span>[j + <span class="number">1</span>] - <span class="built_in">bin</span>[j])</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(<span class="built_in">bin</span>[j + <span class="number">1</span>]), <span class="built_in">int</span>(<span class="built_in">bin</span>[j + <span class="number">2</span>])):</span><br><span class="line">            fbank[j, i] = (<span class="built_in">bin</span>[j + <span class="number">2</span>] - i) / (<span class="built_in">bin</span>[j + <span class="number">2</span>] - <span class="built_in">bin</span>[j + <span class="number">1</span>])</span><br><span class="line">    <span class="keyword">return</span> fbank</span><br></pre></td></tr></table></figure>
+<p>选取最低频率为0，最高频率为采样率的一半，选取26个滤波器</p>
+<p>将功率谱与滤波器做点积，这时filter_bank的shape是325*26，达成了降维的目标。<br />
+再将filter_bank中的0值改为最小负数，防止运算出现问题，再对每个滤波器的能量取log即得到log梅尔频谱。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fbank = get_filter_banks(filters_num=<span class="number">26</span>, samplerate=sample_rate, high_freq=sample_rate / <span class="number">2</span>)</span><br><span class="line">filter_banks = np.dot(pow_frames, fbank.T)</span><br><span class="line">filter_banks = np.where(filter_banks == <span class="number">0</span>, np.finfo(<span class="built_in">float</span>).eps, filter_banks)  <span class="comment"># Numerical Stability</span></span><br><span class="line">filter_banks = <span class="number">20</span> * np.log10(filter_banks)  <span class="comment"># dB</span></span><br></pre></td></tr></table></figure>
+<p><img src="filter_banks.png" alt="filter_banks" /></p>
+<p><strong>DCT</strong></p>
+<p>进行离散余弦变换（DCT）变换，保留DCT的第2-13个系数</p>
+<p>事实证明，在上一步中计算出的滤波器组系数是高度相关的，这在某些机器学习算法中可能会出现问题。因此，我们可以应用离散余弦变换（DCT）去相关滤波器组系数，并产生滤波器组的压缩表示。<br />
+通常，对于自动语音识别（ASR），结果倒谱系数2-13将保留，其余的将被丢弃； num_ceps =12。丢弃其他系数的原因是它们代表滤波器组系数的快速变化，而这些细微的细节对自动语音识别（ASR）毫无帮助。<br />
+这里在进行DCT变化时用到了scipy模块的scipy.fftpack.dct函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num_ceps = <span class="number">12</span></span><br><span class="line">mfcc = dct(filter_banks, <span class="built_in">type</span>=<span class="number">2</span>, axis=<span class="number">1</span>, norm=<span class="string">&#x27;ortho&#x27;</span>)[:, <span class="number">1</span>: (num_ceps + <span class="number">1</span>)]  <span class="comment"># Keep 2-13</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">可以将正弦提升器1应用于MFCC，去加重过高的MFCCs，这被可以改善嘈杂信号中的语音识别。</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">cep_lifter = <span class="number">22</span></span><br><span class="line">(nframes, ncoeff) = mfcc.shape</span><br><span class="line">n = numpy.arange(ncoeff)</span><br><span class="line">lift = <span class="number">1</span> + (cep_lifter / <span class="number">2</span>) * numpy.sin(numpy.pi * n / cep_lifter)</span><br><span class="line">mfcc *= lift  <span class="comment"># *</span></span><br></pre></td></tr></table></figure>
+<p><img src="mfcc_f.png" alt="mfcc_f" /></p>
+<h3 id="%E4%BB%A3%E7%A0%81%E6%80%BB%E5%92%8C" id="代码总和">代码总和</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> librosa</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> librosa.display</span><br><span class="line"><span class="keyword">import</span> math </span><br><span class="line"><span class="keyword">from</span> scipy.fftpack <span class="keyword">import</span> dct</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pre_emphasis</span>(<span class="params">signal, coefficient=<span class="number">0.97</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;对信号进行预加重&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> np.append(signal[<span class="number">0</span>], signal[<span class="number">1</span>:] - coefficient * signal[:-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">audio2frame</span>(<span class="params">signal, frame_length, frame_step, winfunc=<span class="keyword">lambda</span> x: np.ones(<span class="params">(<span class="params">x,</span>)</span>)</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;分帧&#x27;&#x27;&#x27;</span></span><br><span class="line">    signal_length = <span class="built_in">len</span>(signal)</span><br><span class="line">    frame_length = <span class="built_in">int</span>(<span class="built_in">round</span>(frame_length)) <span class="comment"># 四舍五入</span></span><br><span class="line">    frame_step = <span class="built_in">int</span>(<span class="built_in">round</span>(frame_step))</span><br><span class="line">    <span class="comment"># 确保我们至少有1帧</span></span><br><span class="line">    <span class="keyword">if</span> signal_length &lt;= frame_length:</span><br><span class="line">        frames_num = <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        frames_num = <span class="number">1</span> + <span class="built_in">int</span>(math.ceil((<span class="number">1.0</span> * signal_length - frame_length) / frame_step))</span><br><span class="line">    pad_length = <span class="built_in">int</span>((frames_num - <span class="number">1</span>) * frame_step + frame_length)</span><br><span class="line">    zeros = np.zeros((pad_length - signal_length))</span><br><span class="line">    pad_signal = np.concatenate((signal, zeros))</span><br><span class="line">    indices = np.tile(np.arange(<span class="number">0</span>, frame_length), (frames_num, <span class="number">1</span>)) + np.tile(np.arange(<span class="number">0</span>, frames_num * frame_step, frame_step),(frame_length, <span class="number">1</span>)).T</span><br><span class="line">    indices = np.array(indices, dtype=np.int32)</span><br><span class="line">    frames = pad_signal[indices]</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    加窗</span></span><br><span class="line"><span class="string">    内部实现:</span></span><br><span class="line"><span class="string">    frames *= 0.54 - 0.46 * numpy.cos((2 * numpy.pi * n) / (frame_length - 1))  </span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    frames *= np.hamming(frame_length)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># win = np.tile(winfunc(frame_length), (frames_num, 1))</span></span><br><span class="line">    <span class="comment"># return frames * win</span></span><br><span class="line">    <span class="keyword">return</span> frames</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hz2mel</span>(<span class="params">hz</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;把频率hz转化为梅尔频率&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2595</span> * np.log10(<span class="number">1</span> + hz / <span class="number">700.0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mel2hz</span>(<span class="params">mel</span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;把梅尔频率转化为hz&#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">700</span> * (<span class="number">10</span> ** (mel / <span class="number">2595.0</span>) - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_filter_banks</span>(<span class="params">filters_num=<span class="number">40</span>, NFFT=<span class="number">512</span>, samplerate=<span class="number">16000</span>, low_freq=<span class="number">0</span>, high_freq=<span class="literal">None</span></span>):</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;计算梅尔三角间距滤波器，该滤波器在第一个频率和第三个频率处为0，在第二个频率处为1&#x27;&#x27;&#x27;</span></span><br><span class="line">    low_mel = hz2mel(low_freq)</span><br><span class="line">    high_mel = hz2mel(high_freq)</span><br><span class="line">    <span class="comment"># 我们要做n个滤波器组，为此需要n+2个点，这意味着在们需要low_mel和high_mel之间线性间隔n个点</span></span><br><span class="line">    mel_points = np.linspace(low_mel, high_mel, filters_num + <span class="number">2</span>)</span><br><span class="line">    hz_points = mel2hz(mel_points)</span><br><span class="line">    <span class="built_in">bin</span> = np.floor((NFFT + <span class="number">1</span>) * hz_points / samplerate)</span><br><span class="line">    fbank = np.zeros([filters_num, <span class="built_in">int</span>(np.floor(NFFT / <span class="number">2</span> + <span class="number">1</span>))])</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, filters_num):</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(<span class="built_in">bin</span>[j]), <span class="built_in">int</span>(<span class="built_in">bin</span>[j + <span class="number">1</span>])):</span><br><span class="line">            fbank[j, i] = (i - <span class="built_in">bin</span>[j]) / (<span class="built_in">bin</span>[j + <span class="number">1</span>] - <span class="built_in">bin</span>[j])</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">int</span>(<span class="built_in">bin</span>[j + <span class="number">1</span>]), <span class="built_in">int</span>(<span class="built_in">bin</span>[j + <span class="number">2</span>])):</span><br><span class="line">            fbank[j, i] = (<span class="built_in">bin</span>[j + <span class="number">2</span>] - i) / (<span class="built_in">bin</span>[j + <span class="number">2</span>] - <span class="built_in">bin</span>[j + <span class="number">1</span>])</span><br><span class="line">    <span class="keyword">return</span> fbank</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">signal , sample_rate = librosa.load(<span class="string">&#x27;chew.wav&#x27;</span>, sr=<span class="number">22050</span>)</span><br><span class="line">emphasized_signal = pre_emphasis(signal)</span><br><span class="line"></span><br><span class="line">frames = audio2frame(signal, <span class="number">0.025</span>*sample_rate, <span class="number">0.01</span>*sample_rate)</span><br><span class="line"><span class="comment"># 傅立叶变换和功率谱</span></span><br><span class="line"></span><br><span class="line">NFFT = <span class="number">512</span></span><br><span class="line">mag_frames = np.absolute(np.fft.rfft(frames, NFFT))  <span class="comment"># Magnitude of the FFT</span></span><br><span class="line">pow_frames = ((<span class="number">1.0</span> / NFFT) * ((mag_frames) ** <span class="number">2</span>))  <span class="comment"># Power Spectrum,**2是平方</span></span><br><span class="line">fbank = get_filter_banks(filters_num=<span class="number">26</span>, samplerate=sample_rate, high_freq=sample_rate / <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">filter_banks = np.dot(pow_frames, fbank.T)</span><br><span class="line">filter_banks = np.where(filter_banks == <span class="number">0</span>, np.finfo(<span class="built_in">float</span>).eps, filter_banks)  <span class="comment"># Numerical Stability</span></span><br><span class="line">filter_banks = <span class="number">20</span> * np.log10(filter_banks)  <span class="comment"># dB</span></span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">&quot;filter_banks&quot;</span>)</span><br><span class="line">plt.imshow(np.flipud(filter_banks.T), cmap=plt.cm.jet, aspect=<span class="number">0.1</span>,</span><br><span class="line">		   extent=[<span class="number">0</span>, filter_banks.shape[<span class="number">1</span>], <span class="number">0</span>, filter_banks.shape[<span class="number">0</span>]])  <span class="comment"># 画热力图</span></span><br><span class="line">plt.xlabel(<span class="string">&quot;Frames&quot;</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Dimension&quot;</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">plt.tick_params(axis=<span class="string">&#x27;both&#x27;</span>, labelsize=<span class="number">14</span>)</span><br><span class="line">plt.savefig(<span class="string">&#x27;filter_banks.png&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">num_ceps = <span class="number">12</span></span><br><span class="line">mfcc = dct(filter_banks, <span class="built_in">type</span>=<span class="number">2</span>, axis=<span class="number">1</span>, norm=<span class="string">&#x27;ortho&#x27;</span>)[:, <span class="number">1</span> : (num_ceps + <span class="number">1</span>)] <span class="comment"># Keep 2-13</span></span><br><span class="line"> </span><br><span class="line">cep_lifter=<span class="number">22</span></span><br><span class="line">(nframes, ncoeff) = mfcc.shape</span><br><span class="line">n = np.arange(ncoeff)</span><br><span class="line">lift = <span class="number">1</span> + (cep_lifter / <span class="number">2</span>) * np.sin(np.pi * n / cep_lifter)</span><br><span class="line">mfcc *= lift  </span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">&quot;mfcc&quot;</span>)</span><br><span class="line">plt.imshow(np.flipud(mfcc.T), cmap=plt.cm.jet, aspect=<span class="number">0.05</span>, extent=[<span class="number">0</span>,mfcc.shape[<span class="number">1</span>],<span class="number">0</span>,mfcc.shape[<span class="number">0</span>]]) <span class="comment">#画热力图</span></span><br><span class="line">plt.xlabel(<span class="string">&quot;Frames&quot;</span>,fontsize = <span class="number">14</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Dimension&quot;</span>,fontsize = <span class="number">14</span>)</span><br><span class="line">plt.tick_params(axis=<span class="string">&#x27;both&#x27;</span>,labelsize = <span class="number">14</span>)</span><br><span class="line">plt.savefig(<span class="string">&#x27;mfcc.png&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><br><br></p>
+<p>参考链接：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/LXP-Never/p/10918590.html">语音信号的梅尔频率倒谱系数(MFCC)的原理讲解及python实现</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/LXP-Never/p/11602510.html">基于MFCC的语音数据特征提取概述</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43091428/article/details/116801214?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162141971816780262593783%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=162141971816780262593783&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-1-116801214.pc_search_result_cache&amp;utm_term=%E5%AE%AB%E6%B0%B4%E4%BA%8C%E5%8F%B6">python求音频的梅尔倒谱系数</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://goen-kkk.github.io/2021/05/19/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/" data-id="ckt5vnhat0025ykw84z2s24v3" class="article-share-link">
+        Share
+      </a>
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/" rel="tag">音频处理</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2021/05/20/Bert-Multi-Label-Text-Classification%E4%BB%A3%E7%A0%81%E8%A7%A3%E6%9E%90/" class="article-nav-link">
+    <strong class="article-nav-caption">Newer</strong>
+    <div class="article-nav-title">
+      
+      Bert-Multi-Label-Text-Classification代码解析
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2021/05/16/%E4%BC%81%E4%B8%9A%E7%8E%AF%E5%A2%83%E6%B8%97%E9%80%8F%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title">企业环境渗透问题总结</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '230adc40d9d7a3e50b5c',
+    clientSecret: '1db3e4d5aa412bcce6617dfec4fe9b8dddf522e4',
+    repo: 'gitalk',
+    owner: 'goen-kkk',
+    admin: ['goen-kkk'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+  
+
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Mendale’s Blog &copy; 2022</li>
+      
+        <li>京ICP备17054916号-2</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Mendale’s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">Gallery</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Tags</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Categories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  
+<script src="/js/anime.min.js"></script>
+
+  
+<script src="/js/fireworks.js"></script>
+
+
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>

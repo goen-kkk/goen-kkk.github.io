@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Twitter-Style-Trans |
+    
+    Mendale’s Blog</title>
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Mendale’s Blog" type="application/atom+xml">
+</head>
+
+<body>
+  <main class="content">
+    <section class="outer">
+  <article id="post-Twitter-Style-Trans" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
+
+<h1 class="article-title" itemprop="name">
+  Twitter-Style-Trans
+</h1>
+
+
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2021/05/20/Twitter-Style-Trans/" class="article-date">
+  <time datetime="2021-05-20T13:06:29.000Z" itemprop="datePublished">2021-05-20</time>
+</a>
+      
+<div class="article-category">
+  <a class="article-category-link" href="/categories/NLP/">NLP</a>
+</div>
+
+    </div>
+    
+
+    
+    
+<div class="tocbot"></div>
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+      
+      <h2 id="twitter%E8%AF%AD%E8%A8%80%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB" id="Twitter语言风格迁移">Twitter语言风格迁移</h2>
+<h3 id="%E7%A0%94%E7%A9%B6%E7%9B%AE%E6%A0%87" id="研究目标">研究目标</h3>
+<p>能将正式表达改为具有twitter风格的口语表达</p>
+<pre class="mermaid">graph LR
+	id1(Formal English) --> id2(Twitter Style)</pre>
+<br>
+<span id="more"></span>
+<h3 id="twitter-%E8%AF%AD%E8%A8%80%E9%A3%8E%E6%A0%BC" id="Twitter-语言风格">Twitter 语言风格</h3>
+<p>这里所称的twitter风格其实泛指为社交媒体风格，或者是网络用语风格+口语风格</p>
+<h4 id="1.-%E8%AF%AD%E6%B0%94" id="1-语气">1. 语气</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">哈哈：lol</span><br><span class="line">唉：sigh</span><br><span class="line">表兴奋：woot</span><br><span class="line">嗯？：eh</span><br><span class="line">表赞同：aye</span><br><span class="line">表恶心：ew</span><br><span class="line">害怕、烦恼、愤怒：eek</span><br><span class="line">疼痛：ouch</span><br><span class="line">需要安静：shh</span><br><span class="line">当事情很要命时人们常说Jesus/geez/gee/Jeez</span><br><span class="line">吁口气：phew</span><br><span class="line">原来如此：huh</span><br><span class="line">表示惊讶或者犯了错：Oops</span><br><span class="line">啊哈，表示满意或者惊奇：Aha</span><br><span class="line">哎呀，表示一种强烈的反应或者意见：Gee</span><br><span class="line">哎哟，表示恐惧，厌恶：Ugh</span><br><span class="line">哟~~~表示恶心，受不了：Eww</span><br><span class="line">Whoa/Wow 表示惊讶或震惊</span><br><span class="line">Ahh 表示恍然大悟，或表示激动</span><br><span class="line">Ahhhhhh 啊哈哈哈哈哈哈</span><br><span class="line">Uh-huh「嗯哼」</span><br><span class="line">Oh， boy/Oh， man 天哪！表示激动或强烈的感慨</span><br><span class="line">Gosh/Oh my gosh/Oh， my god 天哪！表示激动或强烈的感</span><br></pre></td></tr></table></figure>
+<br>
+<h4 id="2.-%E7%BD%91%E7%BB%9C%E7%94%A8%E8%AF%AD%2F%E7%BC%A9%E5%86%99%2F%E5%A4%A7%E5%86%99" id="2-网络用语-缩写-大写">2. 网络用语/缩写/大写</h4>
+<p>lol</p>
+<h4 id="3.-%E9%9D%9E%E6%AD%A3%E5%BC%8F%E7%94%A8%E8%AF%AD" id="3-非正式用语">3. 非正式用语</h4>
+<h4 id="4.-%E8%A1%A8%E6%83%85%E7%AC%A6" id="4-表情符">4. 表情符</h4>
+<p>😊  🤔  🤣</p>
+<br>
+<h3 id="%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB" id="论文阅读">论文阅读</h3>
+<h4 id="%E4%BD%8E%E8%B5%84%E6%BA%90%E6%96%87%E6%9C%AC%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE%E9%9B%86" id="低资源文本风格迁移数据集">低资源文本风格迁移数据集</h4>
+<p><a target="_blank" rel="noopener" href="https://www.msra.cn/wp-content/uploads/2020/01/A-Dataset-for-Low-Resource-Stylized-Sequence-to-Sequence-Generation.pdf">[paper]</a> <a target="_blank" rel="noopener" href="https://github.com/MarkWuNLP/Data4StylizedS2S">[code]</a></p>
+<p>同时进行 Sequence2Sequence 和风格迁移两个任务</p>
+<p>着重关注TCFC任务</p>
+<p>TCFC 的任务定义为，给定一个推特(Twitter)风格的对话上文，给出正规而礼貌的对话回复。</p>
+<p>TCFC 提供170万的推特对话语料以及52,595 informal to formal English text pairs borrowed from the GYAFC作为训练数据。包括三个数据集：</p>
+<ul>
+<li>平行数据集$D$ : 文本到源风格句子对（Twitter）</li>
+<li>平行数据集$S$ ： 源风格到目标风格句子对 （GYAFC）</li>
+<li>非平行数据集$M_t$ ： 正式风格的句子（GYAFC）</li>
+</ul>
+<p>TCFC 的验证集和测试集分别包含980和978个样例（改写非正式回复为正式回复）。</p>
+<p>衡量了三种基线模型：</p>
+<ul>
+<li>Pivot-based</li>
+<li>Teacher-student</li>
+<li>Back-translation</li>
+</ul>
+<br>
+<h4 id="style-transfer-in-text%3A-exploration-and-evaluation" id="Style-Transfer-in-Text-Exploration-and-Evaluation">Style Transfer in Text: Exploration and Evaluation</h4>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1711.06861.pdf">[paper]</a> <a target="_blank" rel="noopener" href="https://github.com/fuzhenxin/text_style_transfer">[code]</a></p>
+<p>基于非平行数据</p>
+<p>任务：paper-news title transfer, and positive-negative review transfer</p>
+<p>模型： 两种模型都基于 neural sequence to sequence model.</p>
+<ul>
+<li>multi-decoder</li>
+<li>style-embedding</li>
+</ul>
+<p>评价标准：</p>
+<ul>
+<li>transfer strength</li>
+<li>content preservation</li>
+</ul>
+<br>
+<h3 id="parallel-data-augmentation-for-formality-style-transfer" id="Parallel-Data-Augmentation-for-Formality-Style-Transfer">Parallel Data Augmentation for Formality Style Transfer</h3>
+<p><a target="_blank" rel="noopener" href="https://www.aclweb.org/anthology/2020.acl-main.294.pdf">[paper]</a> <a target="_blank" rel="noopener" href="https://github.com/lancopku/Augmented_Data_for_FST">[dataset]</a></p>
+<p>作者针对 formal 风格迁移任务提出了三种数据增强方法，来获得更多有用的句子对</p>
+<p>方法：</p>
+<ul>
+<li>
+<p><code>Back Translation</code>：机器翻译中很常见的一种方数据增强方法，将目标语言使用训练好的翻译模型翻译成原语言，构成伪句子对。先用已有的平行语料（informal--formal）训练一个 seq2seq 模型，然后将目标语句中 formal 的语句喂给这个 seq2seq 模型，生成 informal 句子，形成伪句子对 informal—formal，来扩充平行语料</p>
+</li>
+<li>
+<p><code>Formality discrimination</code>：先将 informal 英语句子翻译成另一种语言（如法语），然后将翻译回英语</p>
+<p>使用带 formal 标签的语料训练一个 CNN 来给句子打分，如果大于阈值，则被选为 伪平行语料</p>
+</li>
+</ul>
+<p><img src="1274593-20200917191434934-61182056.png" alt="1274593-20200917191434934-61182056" /></p>
+<ul>
+<li><code>multi-task transfer</code>：使用其它任务中带注释的句子对，观察到 inform l的句子通常语法是错误的，而 formal 的句子语法是对的，因此可以将 GEC（Grammatical error correction） 模型所用到的训练数据集直接扩充到现有的平行语料</li>
+</ul>
+<p>模型：</p>
+<ul>
+<li>
+<p>使用 transformer（base）作为 seq2seq 模型</p>
+</li>
+<li>
+<p>训练方法：使用增强的数据进行预训练，再用现有的平行语料进行微调</p>
+</li>
+</ul>
+<br>
+<h3 id="style-transfer-from-non-parallel-text-by-cross-alignment" id="Style-Transfer-from-Non-Parallel-Text-by-Cross-Alignment">Style Transfer from Non-Parallel Text by Cross-Alignment</h3>
+<p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1705.09655.pdf">[paper]</a> <a target="_blank" rel="noopener" href="https://github.com/shentianxiao/language-style-transfer">[code]</a></p>
+<p>作者聚焦于非平行语料文本的风格迁移，针对其研究难点：如何将文本内容与属性分离开来，提出假设跨不同文本语料库共享潜在内容分布，并利用潜在表示的精确对齐来执行风格迁移的方法</p>
+<p>数据集：YELP</p>
+<p>数据处理同 Hu et al 2017 (Toward Controlled Generation of Text）</p>
+<br>
+<h3 id="fighting-offensive-language-on-social-media-with-unsupervised-text-style-transfer" id="Fighting-Offensive-Language-on-Social-Media-with-Unsupervised-Text-Style-Transfer">Fighting Offensive Language on Social Media with Unsupervised Text Style Transfer</h3>
+<p>任务：在社交媒体上，常会出现一些攻击性的语言，这给我们的社交环境带来了很不良的影响，作者基于此提出一种将攻击性的语言转换成非攻击性语言的模型</p>
+<p>方法：由于不存在平行语料，采用的是无监督学习，作者提出了一种结合 collaborative classifier 、注意力机制和 cycle consistency loss 的编码器-解码器的新方法。</p>
+<p>整个模型结构设计的还是蛮简单的，如下图（为了能够更清楚的表达，作者用来多个编码器-解码器、分类器来说明，在实际实验时，都只有一个）：</p>
+<p><img src="1274593-20200323191216217-216885039.png" alt="" /></p>
+<h3 id="a-dual-reinforcement-learning-framework-for-unsupervised-text-style-transfer" id="A-Dual-Reinforcement-Learning-Framework-for-Unsupervised-Text-Style-Transfer">A Dual Reinforcement Learning Framework for Unsupervised Text Style Transfer</h3>
+<p><a target="_blank" rel="noopener" href="https://export.arxiv.org/pdf/1905.10060">[paper]</a> <a target="_blank" rel="noopener" href="https://github.com/luofuli/DualRL">[code]</a></p>
+<p>本文是腾讯微信Al和北大计算语言所发表在 ACL 2019上的论文，关注的是无监督的文本风格转换任务。</p>
+<p>已有工作往往基于分步走的策略：先从文本中分离出内容，再通过一个风格融合模块来进行目标风格文本的生成，而这种策略无法捕获内容与风格之间的隐式关联，容易造成内容缺失等问题。</p>
+<p>为了解决这个问题，作者基于Dual RL框架，分别学习了两个seq2seq模型，一个负责将源输入转换为目标风格输出，另一个恰好相反，这样就能直接完成输入到输出的转换而不需要分步走。</p>
+<p>reward是调和平均风格奖赏（分类器判定为目标风格的概率）和内容奖赏(通过生成的文本重构原文本的概率），训练的时候交替更新两个seq2seq直到收敛。另外，为了解决强化学习在生成过程中容易遇到的两个问题:需要预训练和在rl过程中语言模型容易崩坏，作者通过基于模板的方法来构建伪并行语料集来完成预训练，并且提出了Annealing Pseudo Teacher-Forcing 来缓解后一问题。</p>
+<p>实验部分，文章提出的模型在YELP(情感极性转换）和GYAFC （formality transfer）都取得了最佳的性能，并且发现RL方法对于风格迁移的准确度有所提升，但是在流畅程度上相比 MLE有所欠缺。</p>
+<br>
+<h3 id="formality-style-transfer-with-shared-latent-space" id="Formality-Style-Transfer-with-Shared-Latent-Space">Formality Style Transfer with Shared Latent Space</h3>
+<p><a target="_blank" rel="noopener" href="https://www.aclweb.org/anthology/2020.coling-main.203.pdf">[paper]</a>  <a target="_blank" rel="noopener" href="https://github.com/jimth001/formality_emnlp19">[code]</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://goen-kkk.github.io/2021/05/20/Twitter-Style-Trans/" data-id="cl7nclm6800009kw8fq3bgrgv" class="article-share-link">
+        Share
+      </a>
+      
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%94%9F%E6%88%90/" rel="tag">自然语言生成</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+  
+<nav class="article-nav">
+  
+  <a href="/2021/05/21/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2project/" class="article-nav-link">
+    <strong class="article-nav-caption">Newer</strong>
+    <div class="article-nav-title">
+      
+      信息检索project
+      
+    </div>
+  </a>
+  
+  
+  <a href="/2021/05/20/%E5%AE%9D%E8%97%8F%E5%B7%A5%E5%85%B7-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AF%87/" class="article-nav-link">
+    <strong class="article-nav-caption">Older</strong>
+    <div class="article-nav-title">宝藏工具--语言学习篇</div>
+  </a>
+  
+</nav>
+
+  
+
+  
+  
+  
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '230adc40d9d7a3e50b5c',
+    clientSecret: '1db3e4d5aa412bcce6617dfec4fe9b8dddf522e4',
+    repo: 'gitalk',
+    owner: 'goen-kkk',
+    admin: ['goen-kkk'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+  
+
+
+</article>
+</section>
+    <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+  <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+  <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>Mendale’s Blog &copy; 2022</li>
+      
+        <li>京ICP备17054916号-2</li>
+      
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>theme  <a target="_blank" rel="noopener" href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+  </main>
+  <aside class="sidebar">
+    <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/hexo.svg" alt="Mendale’s Blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">Home</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">Archives</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/gallery">Gallery</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">About</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">Tags</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">Categories</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="fe fe-feed"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+  </aside>
+  
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/copybtn.js"></script>
+
+
+
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  });
+</script>
+
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+  
+<script src="/js/anime.min.js"></script>
+
+  
+<script src="/js/fireworks.js"></script>
+
+
+
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+
+</html>
