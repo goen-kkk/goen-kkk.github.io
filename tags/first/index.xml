@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>first on My New Hugo Site</title>
+    <link>https://goen-kkk.github.io/tags/first/</link>
+    <description>Recent content in first on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 May 2023 09:19:22 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My 1st post</title>
+      <link>https://goen-kkk.github.io/posts/post/</link>
+      <pubDate>Sun, 07 May 2023 09:19:22 +0800</pubDate>
+      
+      <guid>https://goen-kkk.github.io/posts/post/</guid>
+      <description>Desc Text.</description>
+      <content:encoded><![CDATA[<p>test!</p>
+<p>math test:
+inline math:
+$\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…$</p>
+<p>block math:
+$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$</p>
+<p>I 🤗 Hugo!</p>
+<p><mark>hello, world</mark>
+==这还是高亮文本==</p>
+<p><code>code</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><figure>
+    <img loading="lazy" src="https://lilianweng.github.io/posts/2022-06-09-vlm/VC-GPT-results.png"
+         alt="An elephant at sunset source" width="50%"/> <figcaption>
+            <p>An elephant at sunset <a href="https://markdown.com.cn">source</a></p>
+        </figcaption>
+</figure>
+
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
