@@ -6,61 +6,7 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 May 2023 22:46:00 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>[Collection] Pieces</title>
-      <link>https://goen-kkk.github.io/posts/pieces/</link>
-      <pubDate>Tue, 09 May 2023 22:46:00 +0800</pubDate>
-      
-      <guid>https://goen-kkk.github.io/posts/pieces/</guid>
-      <description>INFP的文字糖衣百宝箱</description>
-      <content:encoded><![CDATA[<h2 id="我深爱我们一起相处的这些夜晚">《我深爱我们一起相处的这些夜晚》</h2>
-<h3 id="玉兰花">玉兰花</h3>
-<p>今年的春夏两季决心要<br>
-加快速度，把自己打包成一个<br>
-为时三天的季节<br>
-从冬天里蒸腾而出。<br>
-前面院子里那一树不情愿的<br>
-玉兰花苞失去了控制<br>
-忽然间怒放开来。<br>
-两天后，绸缎般淡粉色的花瓣<br>
-围着树干堆积着<br>
-就像脱下来的衬裙。</p>
-<p>还记得从前的春天拥有多长吗？<br>
-还记得从第一次牵住手指。<br>
-到第一次真正的吻曾经需要多久吗？而这之后。<br>
-还记得另一次漫长的等待，无尽的摩挲。<br>
-就为了解开一粒纽扣吗？</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>[Collection] Fancy websites</title>
-      <link>https://goen-kkk.github.io/posts/collection/</link>
-      <pubDate>Tue, 09 May 2023 22:20:43 +0800</pubDate>
-      
-      <guid>https://goen-kkk.github.io/posts/collection/</guid>
-      <description>收集的各种网站</description>
-      <content:encoded><![CDATA[<h2 id="resources">resources</h2>
-<p><a href="https://freemagazines.top/">Free Magazines Online</a>：外文期刊</p>
-<p><a href="https://dynamicwallpaper.club/gallery">Dynamic Wallpaper Club</a>：墙纸</p>
-<p><a href="https://neetcode.io/">neetcode</a>：刷题网站</p>
-<p><a href="https://www.tofugu.com/">TOFUGU</a>：日语文章博客</p>
-<h2 id="tools">tools</h2>
-<p><a href="https://carbon.now.sh/">carbon</a>：导出美观的代码</p>
-<p><a href="https://www.webfx.com/tools/emoji-cheat-sheet/">Emoji Cheat Sheet</a>：Emoji</p>
-<h3 id="slide">slide</h3>
-<p><a href="https://slidesgo.com/">slidesgo</a></p>
-<p><a href="https://justfreeslide.com/">Just Free Slide</a></p>
-<p><a href="https://www.happyhues.co/">Happy Hues</a></p>
-<h2 id="chatgpt">ChatGPT</h2>
-<p><a href="https://poe.com/ChatGPT">Poe</a></p>
-<p><a href="https://chat.forefront.ai/">forefront.ai</a></p>
-<h2 id="artist">Artist</h2>
-<p><a href="https://harrysdesigns.com/">Harrys</a></p>
-]]></content:encoded>
-    </item>
-    
+    <lastBuildDate>Sat, 13 May 2023 09:57:10 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HUGO博客搭建｜PaperModeX主题</title>
       <link>https://goen-kkk.github.io/posts/post/</link>
@@ -792,7 +738,196 @@
 <li><a href="https://irithys.com/p/hugo-shortcode-list/">irithys</a></li>
 <li><a href="https://shishuochen.github.io/2022/cpvuqozuc/">shishuochen</a></li>
 <li><a href="https://www.sulvblog.cn/posts/blog/build_hugo/">sulvblog</a></li>
+<li><a href="https://www.lilmp.com/2022-06-22/hugo-papermod-blog/#hugopapermod-shortcode">limp</a></li>
 </ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Interview｜Transformer</title>
+      <link>https://goen-kkk.github.io/posts/interv/transformer/</link>
+      <pubDate>Sat, 13 May 2023 09:57:10 +0800</pubDate>
+      
+      <guid>https://goen-kkk.github.io/posts/interv/transformer/</guid>
+      <description>transformer知识点</description>
+      <content:encoded><![CDATA[<figure class="align-center ">
+    <img loading="lazy" src="https://machinelearningmastery.com/wp-content/uploads/2021/09/tour_3.png#center"
+         alt="scaled dot product attention. source: Stefania Cristina" width="30%"/> <figcaption>
+            <p>scaled dot product attention. source: <a href="https://machinelearningmastery.com/the-transformer-attention-mechanism/">Stefania Cristina</a></p>
+        </figcaption>
+</figure>
+
+<p>$$Attention(Q,K,V)=softmax\left(\frac{QK^{T}}{\sqrt{d_k}}\right)V$$</p>
+<h2 id="写一个self_attention-function">写一个self_attention function</h2>
+<p>假如input的dim是<code>batch_size</code>, <code>seq_len</code>, <code>hidden_dim</code>，写一个self attention function。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytorch_lightning</span> <span class="k">as</span> <span class="nn">pl</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">q,k,v = (batch_size, seq_len, dim)
+</span></span></span><span class="line"><span class="cl"><span class="s1">&#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">self_attention</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d_k</span> <span class="o">=</span> <span class="n">k</span><span class="o">.</span><span class="n">size</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">attn_logits</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">k</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>   
+</span></span><span class="line"><span class="cl">    <span class="n">attn_logits</span> <span class="o">=</span> <span class="n">attn_logits</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d_k</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">att_logits</span> <span class="o">=</span> <span class="n">attn_logits</span><span class="o">.</span><span class="n">masked_fill</span><span class="p">(</span><span class="n">mask</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">9e15</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scores</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">attn_logits</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>             <span class="c1"># 计算自注意力权重</span>
+</span></span><span class="line"><span class="cl">    <span class="n">values</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>                    <span class="c1"># 计算自注意力分数</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">values</span><span class="p">,</span> <span class="n">scores</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>ChatGPT版</strong></p>
+<p>这里实现的self attention函数接受一个维度为(<code>batch_size, seq_length, input_dim</code>)的张量作为输入，其中batch_size表示批次大小，seq_length表示序列长度，input_dim表示输入特征的维度。在函数内部，我们首先使用三个线性层将输入特征映射到query、key和value空间。然后，我们通过计算query和key的点积，除以一个可学习的缩放因子，再进行softmax操作，得到注意力权重。最后，我们将注意力权重与value张量相乘，得到注意力输出，再将其映射回原始维度，并添加残差连接和层归一化。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SelfAttention</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">SelfAttention</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span> <span class="o">=</span> <span class="n">input_dim</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span> <span class="o">=</span> <span class="n">hidden_dim</span> <span class="k">if</span> <span class="n">hidden_dim</span> <span class="k">else</span> <span class="n">input_dim</span> <span class="o">//</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">query</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_dim</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Q</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">K</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">V</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># 计算注意力权重</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attn_weights</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">K</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hidden_dim</span><span class="p">)),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># 计算注意力输出</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attn_outputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">attn_weights</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># 将注意力输出映射回原始维度</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attn_outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="n">attn_outputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># 添加残差连接和层归一化</span>
+</span></span><span class="line"><span class="cl">        <span class="n">attn_outputs</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">layer_norm</span><span class="p">(</span><span class="n">attn_outputs</span> <span class="o">+</span> <span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="n">attn_outputs</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)])</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">attn_outputs</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>[Collection] Pieces</title>
+      <link>https://goen-kkk.github.io/posts/pieces/</link>
+      <pubDate>Tue, 09 May 2023 22:46:00 +0800</pubDate>
+      
+      <guid>https://goen-kkk.github.io/posts/pieces/</guid>
+      <description>文字糖衣</description>
+      <content:encoded><![CDATA[<h2 id="我深爱我们一起相处的这些夜晚">《我深爱我们一起相处的这些夜晚》</h2>
+<p>
+  <img loading="lazy" src="https://img01.yzcdn.cn/upload_files/2021/11/19/Fra3fVfC5kzwo6XsEQU1R09tFY6U.jpg!large.jpg" alt=""  /></p>
+<h3 id="玉兰花">玉兰花</h3>
+<p>今年的春夏两季决心要<br>
+加快速度，把自己打包成一个<br>
+为时三天的季节<br>
+从冬天里蒸腾而出。<br>
+前面院子里那一树不情愿的<br>
+玉兰花苞失去了控制<br>
+忽然间怒放开来。<br>
+两天后，绸缎般淡粉色的花瓣<br>
+围着树干堆积着<br>
+就像脱下来的衬裙。</p>
+<p>还记得从前的春天拥有多长吗？<br>
+还记得从第一次牵住手指。<br>
+到第一次真正的吻曾经需要多久吗？而这之后。<br>
+还记得另一次漫长的等待，无尽的摩挲。<br>
+就为了解开一粒纽扣吗？</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>[Collection] Fancy websites</title>
+      <link>https://goen-kkk.github.io/posts/collection/</link>
+      <pubDate>Tue, 09 May 2023 22:20:43 +0800</pubDate>
+      
+      <guid>https://goen-kkk.github.io/posts/collection/</guid>
+      <description>收集的各种网站</description>
+      <content:encoded><![CDATA[<h2 id="resources">resources</h2>
+<p><a href="https://freemagazines.top/">Free Magazines Online</a>：外文期刊</p>
+<p><a href="https://dynamicwallpaper.club/gallery">Dynamic Wallpaper Club</a>：墙纸</p>
+<p><a href="https://neetcode.io/">neetcode</a>：刷题网站</p>
+<p><a href="https://www.tofugu.com/">TOFUGU</a>：日语文章博客</p>
+<h2 id="tools">tools</h2>
+<p><a href="https://carbon.now.sh/">carbon</a>：导出美观的代码</p>
+<p><a href="https://www.webfx.com/tools/emoji-cheat-sheet/">Emoji Cheat Sheet</a>：Emoji</p>
+<h3 id="slide">slide</h3>
+<p><a href="https://slidesgo.com/">slidesgo</a></p>
+<p><a href="https://justfreeslide.com/">Just Free Slide</a></p>
+<p><a href="https://www.happyhues.co/">Happy Hues</a></p>
+<h2 id="chatgpt">ChatGPT</h2>
+<p><a href="https://poe.com/ChatGPT">Poe</a></p>
+<p><a href="https://chat.forefront.ai/">forefront.ai</a></p>
+<h2 id="artist">Artist</h2>
+<p><a href="https://harrysdesigns.com/">Harrys</a></p>
 ]]></content:encoded>
     </item>
     
