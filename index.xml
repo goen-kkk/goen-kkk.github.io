@@ -6,7 +6,7 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 May 2023 09:57:10 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 May 2023 14:51:45 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HUGO博客搭建｜PaperModeX主题</title>
       <link>https://goen-kkk.github.io/posts/post/</link>
@@ -740,6 +740,89 @@
 <li><a href="https://www.sulvblog.cn/posts/blog/build_hugo/">sulvblog</a></li>
 <li><a href="https://www.lilmp.com/2022-06-22/hugo-papermod-blog/#hugopapermod-shortcode">limp</a></li>
 </ul>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>DL复习｜机器学习概述</title>
+      <link>https://goen-kkk.github.io/posts/dl0/</link>
+      <pubDate>Sat, 13 May 2023 14:51:45 +0800</pubDate>
+      
+      <guid>https://goen-kkk.github.io/posts/dl0/</guid>
+      <description>机器学习 ≈ 构建一个映射函数</description>
+      <content:encoded><![CDATA[<p>机器学习：通过算法使得机器能从大量数据中学习规律从而对新的样本做决策。</p>
+<p>机器学习的三要素：模型、学习准则、优化。</p>
+<p>线性模型：$f(x,\theta)=\textbf{w}^T\textbf{x}+b$<br>
+非线性模型：广义的非线性模型可以写为多个非线性基函数𝜙(𝒙) 的线性组合。$f(x,\theta)=\textbf{w}^T\phi(\textbf{x})+b$ 如果 𝜙(𝒙)本身为可学习的基函数，则$f(x,\theta)$就等价于神经网络模型</p>
+<p>学习准则：模型的好坏可以通过期望风险衡量</p>
+<p>常见的损失函数：</p>
+<ol>
+<li>0-1损失：不连续且导数为 0，难以优化</li>
+<li>平方损失：一般不适用于分类问题。$y$为实数值
+$$\mathcal{L}(y, f(\mathbf{x};\theta))=\frac{1}{2}\left(y-f(\mathbf{x};\theta))\right)^2$$</li>
+<li>交叉熵：一般用于分类问题
+$\mathbf{y}$为one-hot标签向量</li>
+</ol>
+<p>$$
+\begin{align}
+\mathcal{L}(\mathbf{y}, f(\mathbf{x};\theta))&amp;=-\mathbf{y}\mathrm{log}f(\mathbf{x};\theta) \\
+&amp;= - \sum^{C}_{c=1}y_c\mathrm{log}f_c(\mathbf{x};\theta) \\
+&amp;= -\mathrm{log}f_y(\mathbf{x};\theta)
+\end{align}
+$$
+因此，交叉熵损失函数也就是负对数似然函数。</p>
+<p>经验风险最小化(Empirical Risk Minimization，ERM)原则：找到一组参数使得经验风险最小。
+
+<style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
+<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice info" >
+
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#info-notice"></use></svg></span>过拟合</p><p>在训练集上错误率很低，但是在未知数据上错误率很高.往往是由于训练数据少和噪声以及模型能力强等原因造成的</p></div>
+为了解决过拟合问题， 一般在经验风险最小化的基础上再引入参数的正则化 (Regularization)来<mark>限制模型能力，使其不要过度地最小化经验风险</mark>.这种准则就是结构风险最小化(Structure Risk Minimization，SRM)准则
+$$
+\theta^*=\underset{\theta}{\arg \min } \frac{1}{N} \sum_{n=1}^N \mathcal{L}\left(y^{(n)}, f\left(\boldsymbol{x}^{(n)} ; \theta\right)\right)+\lambda \mathscr{l}_p(\theta)
+$$
+$\mathscr{l}_2$范数正则化项，各个参数的平方和的开方值，用来减少参数空间，避免过拟合;
+$\lambda$用来控制正则化的强度。<br>
+$\mathscr{l}_1$范数正则化项，各个参数的绝对值之和，通常会使得参数有一定稀疏性。</p>
+<p>加入正则化后，参数被限制到了一定的区域，等价于下面带约束条件的优化问题，
+$$
+\begin{aligned}
+&amp; \theta^*=\underset{\theta}{\arg \min } \frac{1}{N} \sum_{n=1}^N \mathcal{L}\left(y^{(n)}, f\left(\boldsymbol{x}^{(n)} ; \theta\right)\right), \\
+&amp; \text { s.t. } \quad \ell_p(\theta) \leq 1
+\end{aligned}
+$$
+$\mathcal{F}$为函数$f(\theta)$的等高线(为简单起见，这里用直线表示)。可以看出，$\mathscr{l}_1$范数的约束通常会使得最优解位于坐标轴上，意味着某一维会变为0，从而使得最终的参数为稀疏性向量。
+$\mathscr{l}_2$参数取值空间是圆形，比较平滑，很难与损失函数的曲线相交在顶点上，但是它会使得参数更接近与0。</p>
+<figure class="align-center ">
+    <img loading="lazy" src="https://s1.ax1x.com/2023/05/13/p962aSx.png#center"
+         alt="不同范数约束条件下的最优化问题示例" width="85%"/> <figcaption>
+            <p>不同范数约束条件下的最优化问题示例</p>
+        </figcaption>
+</figure>
+
+<figure class="align-center ">
+    <img loading="lazy" src="https://image.szdev.com/images/2018/12/03/book-py_ml_2nd-04_05.png#center"
+         alt="$\mathscr{l}_2$范数约束条件下的最优化问题示例" width="85%"/> <figcaption>
+            <p>$\mathscr{l}_2$范数约束条件下的最优化问题示例</p>
+        </figcaption>
+</figure>
+
+<figure class="align-center ">
+    <img loading="lazy" src="https://image.szdev.com/images/2018/12/03/book-py_ml_2nd-04_06.png#center"
+         alt="$\mathscr{l}_1$范数约束条件下的最优化问题示例" width="85%"/> <figcaption>
+            <p>$\mathscr{l}_1$范数约束条件下的最优化问题示例</p>
+        </figcaption>
+</figure>
+
+<p>从贝叶斯学习的角度来讲，正则化是引入了参数的先验分布，使其不完全依赖训练数据<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>TODO&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 ]]></content:encoded>
     </item>
     
