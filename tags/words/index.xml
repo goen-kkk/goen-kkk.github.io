@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>words on My New Hugo Site</title>
+    <link>https://goen-kkk.github.io/tags/words/</link>
+    <description>Recent content in words on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 May 2023 22:46:00 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/tags/words/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Collection｜Pieces</title>
+      <link>https://goen-kkk.github.io/posts/pieces/</link>
+      <pubDate>Tue, 09 May 2023 22:46:00 +0800</pubDate>
+      
+      <guid>https://goen-kkk.github.io/posts/pieces/</guid>
+      <description>文字糖衣</description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

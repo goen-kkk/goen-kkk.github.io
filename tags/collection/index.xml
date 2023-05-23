@@ -8,36 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 09 May 2023 22:46:00 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/tags/collection/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Collection] Pieces</title>
+      <title>Collection｜Pieces</title>
       <link>https://goen-kkk.github.io/posts/pieces/</link>
       <pubDate>Tue, 09 May 2023 22:46:00 +0800</pubDate>
       
       <guid>https://goen-kkk.github.io/posts/pieces/</guid>
       <description>文字糖衣</description>
-      <content:encoded><![CDATA[<h2 id="我深爱我们一起相处的这些夜晚">《我深爱我们一起相处的这些夜晚》</h2>
-<p>
-  <img loading="lazy" src="https://img01.yzcdn.cn/upload_files/2021/11/19/Fra3fVfC5kzwo6XsEQU1R09tFY6U.jpg!large.jpg" alt=""  /></p>
-<h3 id="玉兰花">玉兰花</h3>
-<p>今年的春夏两季决心要<br>
-加快速度，把自己打包成一个<br>
-为时三天的季节<br>
-从冬天里蒸腾而出。<br>
-前面院子里那一树不情愿的<br>
-玉兰花苞失去了控制<br>
-忽然间怒放开来。<br>
-两天后，绸缎般淡粉色的花瓣<br>
-围着树干堆积着<br>
-就像脱下来的衬裙。</p>
-<p>还记得从前的春天拥有多长吗？<br>
-还记得从第一次牵住手指。<br>
-到第一次真正的吻曾经需要多久吗？而这之后。<br>
-还记得另一次漫长的等待，无尽的摩挲。<br>
-就为了解开一粒纽扣吗？</p>
-]]></content:encoded>
+      <content:encoded><![CDATA[]]></content:encoded>
     </item>
     
     <item>
-      <title>[Collection] Fancy websites</title>
+      <title>Collection｜Fancy websites</title>
       <link>https://goen-kkk.github.io/posts/collection/</link>
       <pubDate>Tue, 09 May 2023 22:20:43 +0800</pubDate>
       
@@ -48,18 +29,24 @@
 <p><a href="https://dynamicwallpaper.club/gallery">Dynamic Wallpaper Club</a>：墙纸</p>
 <p><a href="https://neetcode.io/">neetcode</a>：刷题网站</p>
 <p><a href="https://www.tofugu.com/">TOFUGU</a>：日语文章博客</p>
+<p><a href="https://openlibrary.org/">Open Library</a>：图书</p>
+<p><a href="https://nn.labml.ai/index.html">labml.ai</a>：神经网络和相关算法的简单PyTorch实现的集合</p>
+<p><a href="https://jeffe.cs.illinois.edu/teaching/algorithms/"></a></p>
 <h2 id="tools">tools</h2>
 <p><a href="https://carbon.now.sh/">carbon</a>：导出美观的代码</p>
 <p><a href="https://www.webfx.com/tools/emoji-cheat-sheet/">Emoji Cheat Sheet</a>：Emoji</p>
 <h3 id="slide">slide</h3>
 <p><a href="https://slidesgo.com/">slidesgo</a></p>
 <p><a href="https://justfreeslide.com/">Just Free Slide</a></p>
+<p><a href="https://hislide.io/">HiSlide</a></p>
 <p><a href="https://www.happyhues.co/">Happy Hues</a></p>
 <h2 id="chatgpt">ChatGPT</h2>
 <p><a href="https://poe.com/ChatGPT">Poe</a></p>
 <p><a href="https://chat.forefront.ai/">forefront.ai</a></p>
 <h2 id="artist">Artist</h2>
 <p><a href="https://harrysdesigns.com/">Harrys</a></p>
+<h2 id="website">Website</h2>
+<p><a href="https://www.codewars.com/">Codewars</a></p>
 ]]></content:encoded>
     </item>
     
