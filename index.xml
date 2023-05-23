@@ -856,7 +856,7 @@ ADSketch通过识别代表特定类型性能问题的一组异常度量模式来
 
 <p>半径<code>$R_C[idx]$</code>的更新有点问题。由于原始子序列不可得，我们无法直接计算新的半径。为了解决这个问题，我们使用最坏情况距离进行近似。如图5所示，当<code>$t$</code>位于产生半径(记为<code>$t_r$</code>)的杆件处切空间的(向内指)法线时，新半径达到最大值。</p>
 <figure>
-    <img loading="lazy" src="https://s1.ax1x.com/2023/05/17/p9WGfVP.png"
+    <img loading="lazy" src="https://i.imgloc.com/2023/05/23/VA2KYd.png"
          alt="Figure 8: 簇半径的更新" width="70%"/> <figcaption>
             <p>Figure 8: 簇半径的更新</p>
         </figcaption>
@@ -898,7 +898,7 @@ they are unable to effectively <mark>accommodate</mark> the ever-changing servic
       <guid>https://goen-kkk.github.io/posts/pieces/magnolia/</guid>
       <description>还记得从第一次牵住手指 到第一次真正的吻 曾经需要多久吗？</description>
       <content:encoded><![CDATA[<p>
-  <img loading="lazy" src="https://s1.ax1x.com/2023/05/14/p9cNcdK.jpg" alt=""  /></p>
+  <img loading="lazy" src="https://i.imgloc.com/2023/05/23/VA21tw.jpeg" alt=""  /></p>
 <h2 id="玉兰花">玉兰花</h2>
 <p>今年的春夏两季决心要<br>
 加快速度，把自己打包成一个<br>
