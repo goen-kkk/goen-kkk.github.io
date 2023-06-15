@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DL on My New Hugo Site</title>
+    <link>https://goen-kkk.github.io/tags/dl/</link>
+    <description>Recent content in DL on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 May 2023 21:12:25 +0800</lastBuildDate><atom:link href="https://goen-kkk.github.io/tags/dl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DL复习｜机器学习概论</title>
+      <link>https://goen-kkk.github.io/posts/nndl/dl-0/</link>
+      <pubDate>Sat, 13 May 2023 21:12:25 +0800</pubDate>
+      
+      <guid>https://goen-kkk.github.io/posts/nndl/dl-0/</guid>
+      <description>机器学习：通过算法使得机器能从大量数据中学习规律从而对新的样本做决策。</description>
+      <content:encoded><![CDATA[<h2 id="机器学习基本要素">机器学习基本要素</h2>
+<p><mark>机器学习的三要素：模型、学习准则、优化。</mark></p>
+<h3 id="模型">模型</h3>
+<p>线性模型：$f(x,\theta)=\textbf{w}^T\textbf{x}+b$<br>
+非线性模型：广义的非线性模型可以写为多个非线性基函数𝜙(𝒙) 的线性组合。$f(x,\theta)=\textbf{w}^T\phi(\textbf{x})+b$ 如果 $\phi(\textbf{x})$本身为可学习的基函数，则$f(x,\theta)$就等价于神经网络模型</p>
+<h3 id="学习准则">学习准则</h3>
+<p>模型的好坏可以通过期望风险衡量；
+损失函数是非负实数函数，常见的损失函数：</p>
+<ol>
+<li>0-1损失：不连续且导数为 0，难以优化</li>
+<li>平方损失：一般不适用于分类问题。$y$为实数值
+$$\mathcal{L}(y, f(\mathbf{x};\theta))=\frac{1}{2}\left(y-f(\mathbf{x};\theta))\right)^2$$</li>
+<li>交叉熵：一般用于分类问题
+$\mathbf{y}$为one-hot标签向量
+$$
+\begin{align}
+\mathcal{L}(\mathbf{y}, f(\mathbf{x};\theta))&amp;=-\mathbf{y}\mathrm{log}f(\mathbf{x};\theta) \\
+&amp;= - \sum^{C}_{c=1}y_c\mathrm{log}f_c(\mathbf{x};\theta) \\
+&amp;= -\mathrm{log}f_y(\mathbf{x};\theta)
+\end{align}
+$$</li>
+</ol>
+<p>因此，交叉熵损失函数也就是负对数似然函数。</p>
+<p><strong>经验风险最小化</strong>(Empirical Risk Minimization，ERM)原则：找到一组参数使得经验风险最小。
+
+<style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}</style>
+<div><svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg></div><div class="notice info" >
+
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#info-notice"></use></svg></span>过拟合</p><p>在训练集上错误率很低，但是在未知数据上错误率很高.往往是由于训练数据少和噪声以及模型能力强等原因造成的</p></div></p>
+<p>为了解决过拟合问题， 一般在经验风险最小化的基础上再引入参数的正则化 (Regularization)来<mark>限制模型能力，使其不要过度地最小化经验风险</mark>。这种准则就是<strong>结构风险最小化</strong>(Structure Risk Minimization，SRM)准则
+$$
+\theta^*=\underset{\theta}{\arg \min } \frac{1}{N} \sum_{n=1}^N \mathcal{L}\left(y^{(n)}, f\left(\boldsymbol{x}^{(n)} ; \theta\right)\right)+\lambda \mathscr{l}_p(\theta)
+$$
+<strong>最大似然估计</strong></p>
+<p><strong>最大后验估计</strong></p>
+<p>所有损害优化的方法都是正则化，包括增加优化约束、干扰优化过程（提前停止、随机梯度下降）
+$\mathscr{l}_2$范数正则化项，各个参数的平方和的开方值，用来减少参数空间，避免过拟合;
+$\lambda$用来控制正则化的强度。<br>
+$\mathscr{l}_1$范数正则化项，各个参数的绝对值之和，通常会使得参数有一定稀疏性。</p>
+<p>加入正则化后，参数被限制到了一定的区域，等价于下面带约束条件的优化问题，
+$$
+\begin{aligned}
+&amp; \theta^*=\underset{\theta}{\arg \min } \frac{1}{N} \sum_{n=1}^N \mathcal{L}\left(y^{(n)}, f\left(\boldsymbol{x}^{(n)} ; \theta\right)\right), \\
+&amp; \text { s.t. } \quad \ell_p(\theta) \leq d
+\end{aligned}
+$$
+$\mathcal{F}$为函数$f(\theta)$的等高线(为简单起见，这里用直线表示)。可以看出，$\mathscr{l}_1$范数的约束通常会使得最优解位于坐标轴上，意味着某一维会变为0，从而使得最终的参数为稀疏性向量。
+$\mathscr{l}_2$参数取值空间是圆形，比较平滑，很难与损失函数的曲线相交在顶点上，但是它会使得参数更接近与0。</p>
+<figure>
+    <img loading="lazy" src="https://s1.ax1x.com/2023/05/13/p962aSx.png"
+         alt="不同范数约束条件下的最优化问题示例"/> <figcaption>
+            <p>不同范数约束条件下的最优化问题示例</p>
+        </figcaption>
+</figure>
+
+<figure class="align-center ">
+    <img loading="lazy" src="https://image.szdev.com/images/2018/12/03/book-py_ml_2nd-04_05.png#center"
+         alt="$\mathscr{l}_2$范数约束条件下的最优化问题示例" width="50%"/> <figcaption>
+            <p>$\mathscr{l}_2$范数约束条件下的最优化问题示例</p>
+        </figcaption>
+</figure>
+
+<figure class="align-center ">
+    <img loading="lazy" src="https://image.szdev.com/images/2018/12/03/book-py_ml_2nd-04_06.png#center"
+         alt="$\mathscr{l}_1$范数约束条件下的最优化问题示例" width="50%"/> <figcaption>
+            <p>$\mathscr{l}_1$范数约束条件下的最优化问题示例</p>
+        </figcaption>
+</figure>
+
+<p>从贝叶斯学习的角度来讲，正则化是引入了参数的先验分布，使其不完全依赖训练数据<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<h3 id="优化">优化</h3>
+<p>参数是模型的参数
+超参数是定义模型结构或优化策略的参数，e.g. learning rate</p>
+<p>针对梯度下降的优化算法，除了加正则化项之外，还可以通过提前停止来防止过拟合。如果在验证集上的错误率不再下降，就停止迭代。</p>
+<h4 id="梯度下降">梯度下降</h4>
+<p><strong>批量梯度下降法</strong>(Batch Gradient Descent，BGD)在每次迭代时需要计算每个样本上损失函数的梯度并求和。</p>
+<p>在每次迭代时只采集一个样本，计算这个样本损失函数的梯度并更新参数，即<strong>随机梯度下降法</strong>(Stochastic Gradient Descent，SGD)</p>
+<blockquote>
+<p>随机梯度下降实现简单，收敛速度也非常快，因此使用非常广泛。随机梯度下降相当于在批量梯度 下降的梯度上引入了随机噪声，在非凸优化问题中，随机梯度下降更容易逃离局部最优点。</p>
+</blockquote>
+<p><strong>小批量梯度下降法</strong>(Mini-Batch Gradient Descent)是批量梯度下降和随机梯度下 降的折中.每次迭代时，我们随机选取一小部分训练样本来计算梯度并更新参数，这样既可以兼顾随机梯度下降法的优点，也可以提高训练效率</p>
+<div class="notice note" >
+
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#note-notice"></use></svg></span>批量大小的影响</p><p>批量大小不影响随机梯度的期望，但是会影响随机梯度的方差。<br>
+批量越大，随机梯度的方差越小，引入的噪声也越小，训练也越稳定，因此可以设置较大的学习率。<br>
+而批量较小时，需要设置较小的学习率，否则模型会不收敛。</p></div>
+<figure>
+    <img loading="lazy" src="https://i.328888.xyz/2023/05/18/VVXCjJ.png"
+         alt="小批量梯度下降中，每次选取样本数量对损失下降的影响"/> <figcaption>
+            <p>小批量梯度下降中，每次选取样本数量对损失下降的影响</p>
+        </figcaption>
+</figure>
+
+<ul>
+<li>从(a)可以看出，每次迭代选取的批量样本数越多，下降效果越明显，并且曲线越平滑。当每次选取一个样本时（相当于随机梯度下降），损失整体是下降趋势，但局部看会来回震荡。</li>
+<li>从(b)可以看出，如果按整个数据集迭代的来看损失变化情况，则小批量样本数越小，下降效果越明显。</li>
+</ul>
+<h2 id="线性回归">线性回归</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>TODO&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
